@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import CustomNav from "./components/Nav";
-import About from "./components/About";
-import Gallery from "./components/Gallery";
-import Contact from "./components/Contact";
-import Calendar from "./components/Calendar";
-import Culture from "./components/Culture-History";
-import Membership from "./components/Membership";
-import Footer from "./components/Footer";
+import CustomNav from "../components/Nav";
+import About from "../components/About";
+import Gallery from "../components/Gallery";
+import Contact from "../components/Contact";
+import Calendar from "../components/Calendar";
+import Culture from "../components/Culture-History";
+import Membership from "../components/Membership";
+import Footer from "../components/Footer";
 
 import { Container } from "react-bootstrap";
 

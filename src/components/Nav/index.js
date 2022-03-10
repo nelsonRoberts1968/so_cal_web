@@ -47,20 +47,21 @@ function CustomNav(props) {
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" sticky="top">
         <Container>
-          <Navbar.Brand href="/">SoCal Tanzanian Community</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img
+              alt=""
+              src="/GroupLogo.jpeg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{" "}
+            SoCal Tanzanian Community
+          </Navbar.Brand>
+          {/* <Navbar.Brand href="/">SoCal Tanzanian Community</Navbar.Brand> */}
           <Navbar.Collapse>
             <Nav className="me-auto">
-              {contactSelected ? (
-                <>
-                  <Nav.Link id="nav-selected">Contact</Nav.Link>
-                </>
-              ) : (
-                <>
-                  <Nav.Link onClick={() => handleClick(0)}> Contact </Nav.Link>
-                </>
-              )}
               {aboutSelected ? (
                 <>
                   <Nav.Link id="nav-selected">About</Nav.Link>
@@ -68,18 +69,6 @@ function CustomNav(props) {
               ) : (
                 <>
                   <Nav.Link onClick={() => handleClick(1)}> About </Nav.Link>
-                </>
-              )}
-              {calendarSelected ? (
-                <>
-                  <Nav.Link id="nav-selected">Calendar</Nav.Link>
-                </>
-              ) : (
-                <>
-                  <Nav.Link onClick={() => handleClick(2)}>
-                    {" "}
-                    Calendar{" "}
-                  </Nav.Link>
                 </>
               )}
               {cultureSelected ? (
@@ -91,6 +80,16 @@ function CustomNav(props) {
                   <Nav.Link onClick={() => handleClick(3)}> Culture </Nav.Link>
                 </>
               )}
+              {calendarSelected ? (
+                <>
+                  <Nav.Link id="nav-selected">Calendar</Nav.Link>
+                </>
+              ) : (
+                <>
+                  <Nav.Link onClick={() => handleClick(2)}> Calendar </Nav.Link>
+                </>
+              )}
+
               {gallerySelected ? (
                 <>
                   <Nav.Link id="nav-selected">Gallery</Nav.Link>
@@ -110,6 +109,15 @@ function CustomNav(props) {
                     {" "}
                     Membership{" "}
                   </Nav.Link>
+                </>
+              )}
+              {contactSelected ? (
+                <>
+                  <Nav.Link id="nav-selected">Contact</Nav.Link>
+                </>
+              ) : (
+                <>
+                  <Nav.Link onClick={() => handleClick(0)}> Contact </Nav.Link>
                 </>
               )}
             </Nav>
