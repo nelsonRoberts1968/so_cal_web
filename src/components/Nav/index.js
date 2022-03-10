@@ -50,14 +50,16 @@ function CustomNav(props) {
       <Navbar bg="dark" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src="/GroupLogo.jpeg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            SoCal Tanzanian Community
+            <div>
+              <img
+                alt=""
+                src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/GroupLogo.jpeg?raw=true"
+                width="100"
+                height="100"
+                className="d-inline-block align-top"
+              />{" "}
+              <h1> SoCal Tanzanian Community </h1>
+            </div>
           </Navbar.Brand>
           {/* <Navbar.Brand href="/">SoCal Tanzanian Community</Navbar.Brand> */}
           <Navbar.Collapse>
