@@ -3,6 +3,8 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 function CustomNav(props) {
   const {
+    homeSelected,
+    setHomeSelected,
     contactSelected,
     setContactSelected,
     aboutSelected,
@@ -18,6 +20,7 @@ function CustomNav(props) {
   } = props;
 
   function handleClick(target) {
+    setHomeSelected(false);
     setContactSelected(false);
     setCalendarSelected(false);
     setAboutSelected(false);
@@ -26,22 +29,25 @@ function CustomNav(props) {
     setMembershipSelected(false);
 
     if (target === 0) {
-      setContactSelected(true);
+      setHomeSelected(true);
     }
     if (target === 1) {
       setAboutSelected(true);
     }
     if (target === 2) {
-      setCalendarSelected(true);
+      setCultureSelected(true);
     }
     if (target === 3) {
-      setCultureSelected(true);
+      setCalendarSelected(true);
     }
     if (target === 4) {
       setGallerySelected(true);
     }
     if (target === 5) {
       setMembershipSelected(true);
+    }
+    if (target === 6) {
+      setContactSelected(true);
     }
   }
 
@@ -64,6 +70,15 @@ function CustomNav(props) {
           {/* <Navbar.Brand href="/">SoCal Tanzanian Community</Navbar.Brand> */}
           <Navbar.Collapse>
             <Nav className="me-auto">
+              {homeSelected ? (
+                <>
+                  <Nav.Link id="nav-selected">Home</Nav.Link>
+                </>
+              ) : (
+                <>
+                  <Nav.Link onClick={() => handleClick(0)}> Home </Nav.Link>
+                </>
+              )}
               {aboutSelected ? (
                 <>
                   <Nav.Link id="nav-selected">About</Nav.Link>
@@ -79,7 +94,7 @@ function CustomNav(props) {
                 </>
               ) : (
                 <>
-                  <Nav.Link onClick={() => handleClick(3)}> Culture </Nav.Link>
+                  <Nav.Link onClick={() => handleClick(2)}> Culture </Nav.Link>
                 </>
               )}
               {calendarSelected ? (
@@ -88,7 +103,7 @@ function CustomNav(props) {
                 </>
               ) : (
                 <>
-                  <Nav.Link onClick={() => handleClick(2)}> Calendar </Nav.Link>
+                  <Nav.Link onClick={() => handleClick(3)}> Calendar </Nav.Link>
                 </>
               )}
 
@@ -119,7 +134,7 @@ function CustomNav(props) {
                 </>
               ) : (
                 <>
-                  <Nav.Link onClick={() => handleClick(0)}> Contact </Nav.Link>
+                  <Nav.Link onClick={() => handleClick(6)}> Contact </Nav.Link>
                 </>
               )}
             </Nav>
