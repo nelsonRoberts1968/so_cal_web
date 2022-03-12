@@ -7,10 +7,11 @@ import Calendar from "./components/Calendar";
 import Culture from "./components/Culture-History";
 import Membership from "./components/Membership";
 import Footer from "./components/Footer";
+import EventsForm from './components/EventForm';
 // import Carousel from "./components/Carousel";
 import Home from "./components/Home";
 
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 
 function App() {
   const [homeSelected, setHomeSelected] = useState(true);
@@ -68,9 +69,10 @@ function App() {
             <></>
           )}
           {calendarSelected ? (
-            <>
-              <Calendar></Calendar>
-            </>
+            <div className="events-page">
+              <Card><Calendar></Calendar></Card>
+              <Card><EventsForm /></Card>
+            </div>
           ) : (
             <></>
           )}

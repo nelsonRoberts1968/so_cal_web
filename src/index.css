@@ -344,3 +344,63 @@ a {
   width: 100%;
   justify-content: flex-end;
 }
+
+div.react-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  width: 35vw;
+  height: 50vh;
+  align-items: center;
+  font-size: 1.5rem;
+  border: none;
+}
+
+react-calendar__month-view {
+  width: 90%;
+  height: 90%;
+}
+
+react-calendar__month-view__days__day--weekend {
+    color:white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 70px;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 3px;
+}
+
+.event-form label {
+  margin: 7px;
+}
+
+.events-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.submit-btn {
+  background-color: blue;
+  color: white;
+  border-radius: 25px;
+  padding: 1px;
+  border: 1px white;
+  margin: 20px;
+  height:6vh;
+}
+
