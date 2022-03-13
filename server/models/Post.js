@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-
+const commentSchema = require('./Comment');
 const { Schema } = mongoose;
-
 const dateFormat = require('../utils/dateFormat');
 
 const postSchema = new Schema(
@@ -26,9 +25,14 @@ const postSchema = new Schema(
       type: String,
       required: true
     },
+    comments: [commentSchema]
   }
 );
 
-const Category = mongoose.model('Post', postSchema);
+postSchema.virtual('commentCount').get(function() {
+    return this.comments.length;
+});
 
-module.exports = Category;
+const Post = mongoose.model('Post', postSchema);
+
+module.exports = Post;

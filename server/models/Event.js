@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
-
 const dateFormat = require('../utils/dateFormat');
 
 const eventSchema = new Schema(
@@ -29,6 +27,6 @@ const eventSchema = new Schema(
   }
 );
 
-const Category = mongoose.model('Event', eventSchema);
+const Event = mongoose.model('Event', eventSchema);
 
-module.exports = Category;
+module.exports = Event;
