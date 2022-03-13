@@ -45,7 +45,7 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     events(username: String): [Event]
-    event(_id: ID!): Thought
+    event(_id: ID!): Event
     posts(username: String): [Post]
     post(_id: ID!): Post
   }
