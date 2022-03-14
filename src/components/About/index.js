@@ -1,18 +1,23 @@
 import React from "react";
 import Slider from "./Slider";
 //import coverImage from "../../assets/cover/cover-image.jpg";
+
 function About() {
   return (
     <>
     <section className="my-5">
       <h1 id="about">Who we are</h1>
       {/* <img
+      <img
         src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/Event10.jpeg?raw=true"
         className="my-2"
         style={{ width: "100%" }}
         alt="cover"
       /> */}
       <Slider />
+      
+      <h1 id="about">Who we are</h1>
+      <hr />
       <div className="my-2">
         <p>
           The SoCal Tanzanian Community is a group of people from Tanzania
@@ -29,12 +34,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Vision</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>
           The vision of the SoCal Tanzanian Community shall be: Striving to
@@ -45,12 +45,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Mission</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>
           The Mission of the SoCal Tanzanian Community shall be to envision the
@@ -61,12 +56,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Action Plan</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>
           There shall be three cardinal agendas which are Production,
@@ -77,12 +67,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Production</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>
           The SoCal Tanzanian Community is a non-profit organization but will be
@@ -93,12 +78,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Empowerment</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>
           Human capacity building shall be the cornerstone of the community with
@@ -108,12 +88,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Development</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>
           The SoCal Tanzanian Community shall be well repositioned to take
@@ -123,12 +98,7 @@ function About() {
         </p>
       </div>
       <h1 id="about">Community objectives</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>The main objectives of the SoCal Tanzanian community shall be:</p>
         <ul>
@@ -144,12 +114,7 @@ function About() {
         </ul>
       </div>
       <h1 id="about">The Powers</h1>
-      {/* <img
-        src={coverImage}
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
-      /> */}
+      <hr />
       <div className="my-2">
         <p>To achieve its objectives the SoCal Tanzanian community may:</p>
         <ul>
