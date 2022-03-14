@@ -56,7 +56,7 @@ body {
 }
 
 body {
-  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bfb20e32748687.56928050f28a1.jpg");
+  background-image: url("https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/gallery/src/assets/images/tanzania%20black%20and%20white%20photo.jpg?raw=true");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -170,6 +170,20 @@ form {
   width: 80%;
   display: block;
   margin: auto;
+  padding: 15px;
+  background-color: #e0e0df;
+  border-radius: 15px;
+  border-style: double;
+}
+
+.form {
+  width: 80%;
+  display: block;
+  margin: auto;
+  background-color: #e0e0df;
+  border-radius: 15px;
+  border-style: double;
+  padding: 15px;
 }
 
 input {

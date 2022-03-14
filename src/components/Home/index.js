@@ -11,7 +11,7 @@ const Home = () => {
       />
       <hr />
       <br />
-      <Form>
+      <Form class="form">
         <h1> Member Login </h1>
         <br />
         <Form.Group className="mb-3" controlId="formBasicEmail">
