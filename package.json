@@ -13,7 +13,9 @@
     "react-calendar": "^3.7.0",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "react-share": "^4.4.0",
     "sassy-datepicker": "^0.8.0",
+    "social-media-icons-react": "^1.1.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

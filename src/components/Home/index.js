@@ -1,44 +1,39 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 const Home = () => {
   return (
     <Container>
-      <div class="row" id="container">
-        <form id="login-form" class="">
-          <div class="card" class="center">
-            <div class="card-header">
-              <h2>Member Login</h2>
-            </div>
-            <div class="card-content">
-              <div>
-                <label class="form-label" for="email-input-login">
-                  Email
-                </label>
-                <input type="text" class="form-input" id="email-input-login" />
-              </div>
-              <div>
-                <label for="password-input-login" class="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  id="password-input-login"
-                  class="form-input"
-                />
-              </div>
-            </div>
-            <div class="card-action">
-              <button type="submit" id="login-btn" class="btn">
-                Login!
-              </button>
-              <a type="button" class="btn" href="/signup">
-                Sign up
-              </a>
-            </div>
-          </div>
-        </form>
-      </div>
+      <Row>
+        <Col>
+          <img
+            className="d-block w-100"
+            src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/Event9.jpeg?raw=true"
+            alt="Event 2"
+          />
+        </Col>
+        <Col>
+          <Form>
+            <h1> Member Login </h1>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+            <Button variant="primary" type="submit">
+              Register
+            </Button>
+          </Form>
+        </Col>
+      </Row>
     </Container>
   );
 };
