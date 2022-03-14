@@ -17,10 +17,20 @@ main {
   --spacing-five: calc(2.5rem);
 }
 
+/*Nav Bar*/
+
 .navBar {
   color: var(--darker);
   background-color: var(--light);
   width: 100%;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav li {
+  cursor: pointer;
 }
 
 * {
@@ -103,6 +113,8 @@ header a {
   color: var(--darker);
 }
 
+/*Buttons*/
+
 button {
   font-size: 1rem;
   text-decoration: none;
@@ -124,8 +136,10 @@ button[disabled] {
   opacity: 0.8;
 }
 
+/*Images*/
 img {
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .cover-img {
@@ -139,6 +153,7 @@ span[role="img"] {
   cursor: default;
 }
 
+/*Forms*/
 form {
   width: 80%;
   display: block;
@@ -161,14 +176,6 @@ input:focus {
 
 li {
   list-style: none;
-}
-
-nav a:hover {
-  text-decoration: none;
-}
-
-nav li {
-  cursor: pointer;
 }
 
 textarea {
@@ -413,7 +420,7 @@ h3 {
 .PaymentForm {
   margin-top: 40px;
   justify-content: center;
-  align-items : center;
+  align-items: center;
 }
 
 /* About Page leadership image sliders design*/
@@ -426,7 +433,7 @@ h3 {
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .container-slider {
     margin: 100px 10px 0;
   }
@@ -476,7 +483,6 @@ h3 {
   transform: translateY(-60%);
 }
 
-
 .container-dots {
   position: absolute;
   bottom: 10px;
@@ -495,4 +501,3 @@ h3 {
 .dot.active {
   background: rgb(32, 32, 32);
 }
-
