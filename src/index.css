@@ -96,7 +96,7 @@ a:hover {
 }
 
 header {
-  background: var(--dark);
+  background: var(--light);
 }
 
 header a {

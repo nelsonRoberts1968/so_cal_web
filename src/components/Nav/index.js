@@ -53,7 +53,7 @@ function CustomNav(props) {
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark" sticky="top" class="navBar">
+      <Navbar class="navBar">
         <Container>
           <Navbar.Brand href="#home">
             <div>
