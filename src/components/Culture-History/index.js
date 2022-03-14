@@ -1,5 +1,4 @@
 import React from "react";
-import { alignPropType } from "react-bootstrap/esm/types";
 
 function Culture() {
   return (

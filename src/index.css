@@ -55,6 +55,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bfb20e32748687.56928050f28a1.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
+}
+
 h1,
 h2,
 h3,
