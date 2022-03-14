@@ -1,13 +1,13 @@
 import React from "react";
+import { alignPropType } from "react-bootstrap/esm/types";
 
 function Culture() {
   return (
     <section className="my-5">
       <img
-        src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/Event8.jpeg?raw=true"
-        className="my-2"
-        style={{ width: "100%" }}
-        alt="cover"
+        src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/gallery/src/assets/images/flag-of-tanzania-government-high-commission-of-tanzania-london-coat-of-arms-of-tanzania-png-favpng-0XT21jhTwUx5NFkXACcnPX003.jpeg?raw=true"
+        alt="coat of arms"
+        class="img-col"
       />
       <h1 id="culture">Culture in Tanzania</h1>
       <hr />
