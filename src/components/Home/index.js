@@ -6,7 +6,7 @@ const Home = () => {
     <Container fluid>
       <img
         className="d-block w-100"
-        src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/Event9.jpeg?raw=true"
+        src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/gallery/src/assets/images/Event9.jpeg?raw=true"
         alt="Event 2"
       />
       <hr />
