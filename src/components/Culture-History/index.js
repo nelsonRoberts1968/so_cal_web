@@ -1,9 +1,8 @@
 import React from "react";
-import { alignPropType } from "react-bootstrap/esm/types";
 
 function Culture() {
   return (
-    <section className="my-5">
+    <section className="my-5 form">
       <img
         src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/gallery/src/assets/images/flag-of-tanzania-government-high-commission-of-tanzania-london-coat-of-arms-of-tanzania-png-favpng-0XT21jhTwUx5NFkXACcnPX003.jpeg?raw=true"
         alt="coat of arms"
