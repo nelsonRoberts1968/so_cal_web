@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 function CustomNav(props) {
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", changeWidth);
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
   const {
     homeSelected,
     setHomeSelected,
@@ -52,6 +68,7 @@ function CustomNav(props) {
   }
 
   return (
+    <>
     <header>
       <Navbar bg="dark" variant="dark" sticky="top">
         <Container>
@@ -137,11 +154,20 @@ function CustomNav(props) {
                   <Nav.Link onClick={() => handleClick(6)}> Contact </Nav.Link>
                 </>
               )}
+            
+                   {/* <button onClick={toggleNav} className="h-menu">
+       Menu
+     </button> */}
+             
             </Nav>
           </Navbar.Collapse>
         </Container>
+     
       </Navbar>
+      
     </header>
+  
+     </>
   );
 }
 
