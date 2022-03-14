@@ -16,7 +16,7 @@ const Footer = () => {
                 Instagram{" "}
               </Nav.Link>
               <Nav.Link
-                href="https://m.facebook.com/groups/963510197456249?group_view_referrer=profile_browser "
+                href="https://www.facebook.com/groups/963510197456249/?ref=share "
                 target="_blank"
               >
                 {" "}
