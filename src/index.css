@@ -23,7 +23,8 @@ main {
   color: var(--darker);
   background-color: var(--light);
   width: 100%;
-  justify-content: flex-start;
+  background-color: #555;
+  overflow: auto;
 }
 
 nav a:hover {
@@ -32,6 +33,12 @@ nav a:hover {
 
 nav li {
   cursor: pointer;
+}
+
+.me-auto {
+  font-size: 23px;
+  width: 100%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
 }
 
 * {
@@ -330,7 +337,6 @@ a {
   flex: 10 15;
 }
 
-
 .card-text:last-child {
   margin-bottom: 5px;
   text-align: center;
@@ -389,14 +395,15 @@ div.react-calendar {
 
 .react-calendar button {
   color: black;
-
 }
 
 .react-calendar__navigation button {
   color: black;
 }
 
-.react-calendar__tile .react-calendar__month-view__days__day .react-calendar__month-view__days__day--neighboringMonth {
+.react-calendar__tile
+  .react-calendar__month-view__days__day
+  .react-calendar__month-view__days__day--neighboringMonth {
   color: blue;
 }
 .react-calendar__month-view {
@@ -406,7 +413,7 @@ div.react-calendar {
 }
 
 .react-calendar__month-view__days__day--weekend {
-    color:black;
+  color: black;
 }
 
 .form-container {
@@ -447,13 +454,13 @@ div.react-calendar {
 }
 
 .event-submit-btn {
-  background-color:blue;
+  background-color: blue;
   color: white;
   border-radius: 15px;
   padding: 1px;
   border: 1px white;
   margin: 20px;
-  height:5vh;
+  height: 5vh;
   width: 30%;
   align-self: center;
 }

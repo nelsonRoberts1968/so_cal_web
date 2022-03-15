@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 
 const Contact = () => {
-
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,26 +23,28 @@ const Contact = () => {
     let result = await response.json();
     alert(result.status);
   };
-    return(
-        <>
+  return (
+    <>
+      <Form class="form" onSubmit={handleSubmit}>
         <h1>Contact</h1>
-        <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" required />
+          <Form.Label>Full Name: </Form.Label>
+          <Form.Control type="name" placeholder="Enter name" />
         </div>
+        <br />
         <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" required />
+          <Form.Label>Email address: </Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
         </div>
+        <br />
         <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" required />
+          <Form.Label>Message: </Form.Label>
+          <textarea placeholder="Enter Message" id="message" required />
         </div>
         <button type="submit">{status}</button>
-      </form>
-      </>
-    );
-  };
+      </Form>
+    </>
+  );
+};
 
 export default Contact;
