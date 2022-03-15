@@ -73,7 +73,7 @@ function CustomNav(props) {
       <Navbar class="navBar">
         <Container>
           <Navbar.Brand href="#home">
-            <div>
+            <div className="group-logo">
               <img
                 alt=""
                 src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/GroupLogo.jpeg?raw=true"
