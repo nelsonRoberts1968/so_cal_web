@@ -36,12 +36,6 @@ const userSchema = new Schema({
       ref: 'Event'
     }
   ],
-  // posts: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: 'Post'
-  //   }
-  // ]
 });
 
 // set up pre-save middleware to create password

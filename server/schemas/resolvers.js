@@ -1,4 +1,4 @@
-const { User, Event, Post } = require('../models');
+const { User, Event } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -10,8 +10,7 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
-          .populate('events')
-          .populate('posts');
+          .populate('events');
     
         return userData;
       }
@@ -29,30 +28,18 @@ const resolvers = {
       return Event.findOne({ _id });
     },
 
-    // get all posts
-    posts: async (parent, { username }) => {
-        const params = username ? { username } : {};
-        return Post.find(params).sort({ createdAt: -1 });
-    },
-    // get a post by id 
-    post: async (parent, { _id }) => {
-        return Post.findOne({ _id });
-    },
-
     // get all users
     users: async () => {
       return User.find()
         .select('-__v -password')
-        .populate('events')
-        .populate('posts');
+        .populate('events');
     },
     
     // get a user by username
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
-        .populate('events')
-        .populate('posts');
+        .populate('events');
     },
   },
 
@@ -99,31 +86,15 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    addPost: async (parent, args, context) => {
-        if (context.user) {
-          const post = await Post.create({ ...args, username: context.user.username });
-      
-          await User.findByIdAndUpdate(
-            { _id: context.user._id },
-            { $push: { posts: post._id } },
-            { new: true }
-          );
-      
-          return post;
-        }
-      
-        throw new AuthenticationError('You need to be logged in!');
-      },
-
-    addComment: async (parent, { postId, commentBody }, context) => {
+    addComment: async (parent, { eventId, commentBody }, context) => {
       if (context.user) {
-        const updatedPost = await Post.findOneAndUpdate(
-          { _id: postId },
+        const updatedEvent = await Event.findOneAndUpdate(
+          { _id: eventId },
           { $push: { comments: { commentBody, username: context.user.username } } },
           { new: true, runValidators: true }
         );
     
-        return updatedPost;
+        return updatedEvent;
       }
     
       throw new AuthenticationError('You need to be logged in!');
