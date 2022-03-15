@@ -2,19 +2,36 @@ main {
   margin: 0 auto;
   max-width: 90%;
   padding: 50px 30px;
-  height:100%
+  height: 100%;
 }
 :root {
   --primary: #2aabe2;
   --secondary: #f3a847;
-  --tertiary: #b12704;
-  --light: #fafafa;
+  --tertiary: #1eb53a;
+  --light: #ffff;
   --dark: #353535;
   --darker: #111111;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
+}
+
+/*Nav Bar*/
+
+.navBar {
+  color: var(--darker);
+  background-color: var(--light);
+  width: 100%;
+  justify-content: flex-start;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav li {
+  cursor: pointer;
 }
 
 * {
@@ -33,9 +50,19 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: 0.1em;
-  background: var(--dark);
-  color: var(--light);
+  background: var(--light);
+  color: var(--darker);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/gallery/src/assets/images/tanzania%20black%20and%20white%20photo.jpg?raw=true");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
 }
 
 h1,
@@ -44,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -90,12 +117,14 @@ a:hover {
 }
 
 header {
-  background: var(--dark);
+  background: var(--light);
 }
 
 header a {
-  color: var(--light);
+  color: var(--darker);
 }
+
+/*Buttons*/
 
 button {
   font-size: 1rem;
@@ -118,16 +147,43 @@ button[disabled] {
   opacity: 0.8;
 }
 
+/*Images*/
 img {
   max-width: 100%;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.cover-img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: auto;
 }
 
 span[role="img"] {
   cursor: default;
 }
 
+/*Forms*/
 form {
-  width: 40%;
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding: 15px;
+  background-color: #e0e0df;
+  border-radius: 15px;
+  border-style: double;
+}
+
+.form {
+  width: 80%;
+  display: block;
+  margin: auto;
+  background-color: #e0e0df;
+  border-radius: 15px;
+  border-style: double;
+  padding: 15px;
 }
 
 input {
@@ -146,14 +202,6 @@ input:focus {
 
 li {
   list-style: none;
-}
-
-nav a:hover {
-  text-decoration: none;
-}
-
-nav li {
-  cursor: pointer;
 }
 
 textarea {
@@ -240,18 +288,6 @@ textarea {
   cursor: pointer;
 }
 
-button {
-  background: var(--primary);
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  padding: 10px 15px;
-}
-
 a {
   border-radius: 5px;
   color: var(--primary);
@@ -277,12 +313,6 @@ a {
 .img-class {
   height: 50px;
   width: 50px;
-}
-
-.portfolio-div {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .card-body {
@@ -347,51 +377,53 @@ a {
 }
 /*Stripe forms Styles */
 .FormGroup {
-	margin: 0 15px 20px;
-	padding: 0;
-	border-style: none;
-	background-color: #7795f8;
-	will-change: opacity, transform;
-	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff;
-	border-radius: 4px;
+  margin: 0 15px 20px;
+  padding: 0;
+  border-style: none;
+  background-color: #7795f8;
+  will-change: opacity, transform;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #829fff;
+  border-radius: 4px;
 }
-.StripePayButton{
+.StripePayButton {
   margin-top: 40px;
 }
 
 .FormRow {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-align: center;
-	align-items: center;
-	margin-left: 15px;
-	border-top: 1px solid #819efc;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+  border-top: 1px solid #819efc;
 }
 
 .StripeElement--webkit-autofill {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 .StripeElement {
-	width: 100%;
-	padding: 11px 15px 11px 0;
+  width: 100%;
+  padding: 11px 15px 11px 0;
 }
 
 button {
-	display: block;
-	font-size: 16px;
-	 width: calc(100% - 30px); 
-	height: 40px;
-	margin: 40px 15px 0;
-	background-color: #2aabe2;;
-	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #2aabe2;;
-	border-radius: 4px;
-	color: #fff;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all 100ms ease-in-out;
-	will-change: transform, background-color, box-shadow;
-	border: none;
+  display: block;
+  font-size: 16px;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 40px 15px 0;
+  background-color: #2aabe2;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #2aabe2;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  will-change: transform, background-color, box-shadow;
+  border: none;
 }
 .h-menu{
   cursor:pointer;
@@ -400,25 +432,26 @@ button {
 }
 
 button:active {
-	background-color: #2aabe2;;
-	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #2aabe2;;
-	transform: scale(0.99);
+  background-color: #2aabe2;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #2aabe2;
+  transform: scale(0.99);
 }
 
 .App {
-	margin-left: 25%;
-	margin-top: 5%;
-	margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-right: 25%;
 }
 
 h1,
 h3 {
-	text-align: center;
+  text-align: center;
 }
-.PaymentForm{
+.PaymentForm {
   margin-top: 40px;
   justify-content: center;
-  align-items : center;
+  align-items: center;
 }
 
 /* About Page leadership image sliders design*/
@@ -431,7 +464,7 @@ h3 {
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .container-slider {
     margin: 100px 10px 0;
   }
@@ -481,7 +514,6 @@ h3 {
   transform: translateY(-60%);
 }
 
-
 .container-dots {
   position: absolute;
   bottom: 10px;
@@ -500,4 +532,3 @@ h3 {
 .dot.active {
   background: rgb(32, 32, 32);
 }
-

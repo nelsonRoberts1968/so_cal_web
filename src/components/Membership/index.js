@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+import { useState } from "react";
 import StripeContainer from "./StripeContainer";
 
 const Membership = () => {
@@ -18,5 +18,6 @@ const Membership = () => {
 		</div>
 	);
 }
+
 export default Membership;
 

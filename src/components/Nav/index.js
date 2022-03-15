@@ -70,21 +70,21 @@ function CustomNav(props) {
   return (
     <>
     <header>
-      <Navbar bg="dark" variant="dark" sticky="top">
+      <Navbar class="navBar">
         <Container>
           <Navbar.Brand href="#home">
             <div>
               <img
                 alt=""
                 src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/GroupLogo.jpeg?raw=true"
-                width="100"
-                height="100"
-                className="d-inline-block align-top"
+                width="150"
+                height="150"
+                className="cover-img"
               />{" "}
-              <h1> SoCal Tanzanian Community </h1>
+              {/* <h1> SoCal Tanzanian Community </h1> */}
             </div>
           </Navbar.Brand>
-          {/* <Navbar.Brand href="/">SoCal Tanzanian Community</Navbar.Brand> */}
+
           <Navbar.Collapse>
             <Nav className="me-auto">
               {homeSelected ? (
@@ -161,6 +161,7 @@ function CustomNav(props) {
              
             </Nav>
           </Navbar.Collapse>
+          <hr />
         </Container>
      
       </Navbar>
