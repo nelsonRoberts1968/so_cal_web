@@ -1,17 +1,19 @@
 const mongoose = require('mongoose');
+const commentSchema = require('./Comment');
 const { Schema } = mongoose;
+
 const dateFormat = require('../utils/dateFormat');
 
-const eventSchema = new Schema(
+const postSchema = new Schema(
   {
-    eventName: {
+    postName: {
       type: String,
-      required: 'You need to have an event name!',
+      required: 'You need to have an post name!',
       trim: true
     },
-    eventText: {
+    postText: {
       type: String,
-      required: 'You need to leave the event details!',
+      required: 'You need to leave the post details!',
       minlength: 1,
       maxlength: 350
     },
@@ -24,9 +26,14 @@ const eventSchema = new Schema(
       type: String,
       required: true
     },
+    comments: [commentSchema]
   }
 );
 
-const Event = mongoose.model('Event', eventSchema);
+postSchema.virtual('commentCount').get(function() {
+    return this.comments.length;
+});
 
-module.exports = Event;
+const Post = mongoose.model('Post', postSchema);
+
+module.exports = Post;

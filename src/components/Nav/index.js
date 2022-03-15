@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 function CustomNav(props) {
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", changeWidth);
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
   const {
     homeSelected,
     setHomeSelected,
@@ -52,11 +68,12 @@ function CustomNav(props) {
   }
 
   return (
+    <>
     <header>
       <Navbar class="navBar">
         <Container>
           <Navbar.Brand href="#home">
-            <div>
+            <div className="group-logo">
               <img
                 alt=""
                 src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/GroupLogo.jpeg?raw=true"
@@ -137,12 +154,21 @@ function CustomNav(props) {
                   <Nav.Link onClick={() => handleClick(6)}> Contact </Nav.Link>
                 </>
               )}
+            
+                   {/* <button onClick={toggleNav} className="h-menu">
+       Menu
+     </button> */}
+             
             </Nav>
           </Navbar.Collapse>
           <hr />
         </Container>
+     
       </Navbar>
+      
     </header>
+  
+     </>
   );
 }
 

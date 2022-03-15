@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const Order = require('./Order');
 
 const userSchema = new Schema({
   firstName: {
@@ -15,17 +13,35 @@ const userSchema = new Schema({
     required: true,
     trim: true
   },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true
+  },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    match: [/^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/, 'Must match an email address!']
   },
   password: {
     type: String,
     required: true,
     minlength: 5
   },
-  orders: [Order.schema]
+  events: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Event'
+    }
+  ],
+  // posts: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'Post'
+  //   }
+  // ]
 });
 
 // set up pre-save middleware to create password
@@ -42,6 +58,15 @@ userSchema.pre('save', async function(next) {
 userSchema.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
+
+// get events count by user
+userSchema.virtual('eventCount').get(function() {
+  return this.events.length;
+});
+// get posts count by user
+userSchema.virtual('postCount').get(function() {
+  return this.posts.length;
+});
 
 const User = mongoose.model('User', userSchema);
 
