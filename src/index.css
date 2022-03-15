@@ -1,6 +1,6 @@
 main {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
   padding: 50px 30px;
   height: 100%;
 }
@@ -212,7 +212,7 @@ textarea {
 }
 
 .container {
-  width: 85%;
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -276,11 +276,6 @@ textarea {
   padding-bottom: var(--spacing-two);
 }
 
-.card {
-  width: 25%;
-  text-align: center;
-}
-
 .img-thumbnail {
   width: auto;
   height: 300px;
@@ -331,13 +326,6 @@ a {
   flex: 10 15;
 }
 
-.card-body {
-  background-color: black;
-  max-width: 100%;
-  /* border-radius: 5px;*/
-  margin-top: 200px;
-  margin-bottom: 5px;
-}
 
 .card-text:last-child {
   margin-bottom: 5px;
@@ -375,35 +363,51 @@ a {
   width: 100%;
   justify-content: flex-end;
 }
+.events-page {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 
 div.react-calendar {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
   box-sizing: border-box;
-  background-color: transparent;
-  color: white;
-  width: 35vw;
-  height: 50vh;
-  align-items: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 100%;
   font-size: 1.5rem;
   border: none;
+  margin-top: 70px;
 }
 
-react-calendar__month-view {
-  width: 90%;
-  height: 90%;
+.react-calendar button {
+  color: black;
+
 }
 
-react-calendar__month-view__days__day--weekend {
-    color:white;
+.react-calendar__navigation button {
+  color: black;
+}
+
+.react-calendar__tile .react-calendar__month-view__days__day .react-calendar__month-view__days__day--neighboringMonth {
+  color: blue;
+}
+.react-calendar__month-view {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color:black;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  margin: 70px;
 }
 
 .event-form {
@@ -413,26 +417,41 @@ react-calendar__month-view__days__day--weekend {
   margin: 3px;
 }
 
+.event-form-title {
+  align-self: center;
+  font-size: larger;
+}
+
 .event-form label {
   margin: 7px;
+}
+
+.event-form input {
+  padding: 10px;
 }
 
 .events-page {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 10px;
 }
 
-.submit-btn {
-  background-color: blue;
+.event-description {
+  height: 12vh;
+}
+
+.event-submit-btn {
+  background-color:blue;
   color: white;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 1px;
   border: 1px white;
   margin: 20px;
-  height:6vh;
+  height:5vh;
+  width: 30%;
+  align-self: center;
 }
 
 /*Stripe forms Styles */

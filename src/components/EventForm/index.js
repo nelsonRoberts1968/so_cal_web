@@ -51,51 +51,57 @@ function EventsForm() {
 
     return (
         <Container className='form-container'>
-            <h3>Add New Event:</h3>
             <form className="event-form" onSubmit={handleSubmit}>
+                <label className='event-form-title'>Add an upcoming event!</label>
+                <label>Title</label>
                 <input
                     type='text'
                     value={title}
-                    placeholder="Event title"
+                    placeholder="Title"
                     onChange={(e) => setTitle(e.target.value)} />
-
+                <label>Description</label>
                 <input
                     type='text'
                     value={description}
-                    placeholder="Event description"
+                    placeholder="Enter a short description"
+                    className='event-description'
                     onChange={(e) => setDescription(e.target.value)} />
-
+                <label>Contact</label>
                 <input
                     type='text'
                     value={contact}
                     placeholder="Your name"
                     onChange={(e) => setContact(e.target.value)} />
-
+                <label>Contact Info</label>
                 <input
                     type='text'
                     value={contactInfo}
                     placeholder="Your phone number and/or email"
+                    className='event-contact-info'
                     onChange={(e) => setContactInfo(e.target.value)} />
-
+                <label>Location</label>
                 <input
                     type='text'
                     value={location}
                     placeholder="Event location"
+                    className='event-location'
                     onChange={(e) => setLocation(e.target.value)} />
-
+                <label>Date/Time</label>
                 <input
                     type='text'
                     value={date}
-                    placeholder="Event date and time"
+                    placeholder="01/01/2022 5:00-7:00 PM"
+                    className='event-date-time'
                     onChange={(e) => setDate(e.target.value)} />
-
+                <label>Link</label>
                 <input
                     type='text'
                     value={link}
-                    placeholder="Link to event url if available"
+                    placeholder="https://"
+                    className='event-link'
                     onChange={(e) => setLink(e.target.value)} />
 
-                <button type="submit" className='submit-btn'>Create</button>
+                <button type="submit" className='event-submit-btn'>Submit</button>
 
                 <div className='message'>{message ? <p>{message}</p> : null}</div>
             </form>
