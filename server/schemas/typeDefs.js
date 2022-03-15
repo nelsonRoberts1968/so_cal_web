@@ -17,10 +17,10 @@ const typeDefs = gql`
 
   type Event {
     _id: ID
+    username: String
     eventName: String
     eventText: String
     createdAt: String
-    username: String
   }
 
   type Post {
@@ -53,7 +53,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
-    addEvent(eventText: String!): Event
+    addEvent(username: String!, eventName: String!, eventText: String!): Event
     addPost(postText: String!): Post
     addComment(postId: ID!, commentBody: String!): Post   
   }

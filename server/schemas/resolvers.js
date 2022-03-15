@@ -60,6 +60,7 @@ const resolvers = {
   Mutation: {
 
     addUser: async (parent, args) => {
+      console.log(args);
       const user = await User.create(args);
       const token = signToken(user);
     
@@ -85,7 +86,7 @@ const resolvers = {
 
     addEvent: async (parent, args, context) => {
       if (context.user) {
-        const event = await Event.create({ ...args, username: context.user.username });
+        const event = await Event.create({ username: context.user.username, ...args });
     
         await User.findByIdAndUpdate(
           { _id: context.user._id },

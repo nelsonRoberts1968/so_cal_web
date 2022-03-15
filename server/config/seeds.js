@@ -21,6 +21,14 @@ db.once('open', async () => {
     password: 'password12345'
   });
 
+  await User.create({
+    firstName: 'test3',
+    lastName: 'test3',
+    username: "test3",
+    email: 'test3@testmail.com',
+    password: 'password12345'
+  });
+
   
 
   console.log('users seeded');
