@@ -41,7 +41,24 @@ db.once('open', async () => {
     createdEvents.push(createdEvent);
   }  
 
-  console.log('users/events seeded');
+  // create comments data
+  for (let i = 0; i < 75; i += 1) {
+    const commentBody = faker.lorem.words(Math.round(Math.random() * 30) + 1);
+
+    const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
+    const { username } = createdUsers.ops[randomUserIndex];
+
+    const randomEventIndex = Math.floor(Math.random() * createdEvents.length);
+    const { _id: eventId } = createdEvents[randomEventIndex];
+
+    await Event.updateOne(
+      { _id: eventId },
+      { $push: { comments: { commentBody, username } } },
+      { runValidators: true }
+    );
+  }
+
+  console.log('users/events/comments seeded');
 
   process.exit(0);
 });
