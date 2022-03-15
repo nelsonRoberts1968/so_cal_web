@@ -7,8 +7,8 @@ import Calendar from "./components/Calendar";
 import Culture from "./components/Culture-History";
 import Membership from "./components/Membership";
 import Footer from "./components/Footer";
-import EventsForm from './components/EventForm';
-// import Carousel from "./components/Carousel";
+import EventsForm from "./components/EventForm";
+
 import Home from "./components/Home";
 
 import { Container, Card } from "react-bootstrap";
@@ -24,7 +24,6 @@ function App() {
 
   return (
     <div>
-      {/* <Carousel></Carousel> */}
       <Container>
         <CustomNav
           homeSelected={homeSelected}
@@ -70,8 +69,12 @@ function App() {
           )}
           {calendarSelected ? (
             <div className="events-page">
-              <Card><Calendar></Calendar></Card>
-              <Card><EventsForm /></Card>
+              <Card>
+                <Calendar></Calendar>
+              </Card>
+              <Card>
+                <EventsForm />
+              </Card>
             </div>
           ) : (
             <></>
