@@ -7,6 +7,7 @@ function About() {
     <>
       <section className="my-5 form">
         <h1 id="about">Who we are</h1>
+        <hr />
         {/* <img
       <img
         src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/Event10.jpeg?raw=true"
@@ -16,8 +17,6 @@ function About() {
       /> */}
         <Slider />
 
-        <h1 id="about">Who we are</h1>
-        <hr />
         <div className="my-2">
           <p>
             The SoCal Tanzanian Community is a group of people from Tanzania
