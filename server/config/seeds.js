@@ -1,37 +1,47 @@
+const faker = require('faker');
+
 const db = require('./connection');
-const { User } = require('../models');
+const { Event, User } = require('../models');
 
 db.once('open', async () => {
-
+  await Event.deleteMany({});
   await User.deleteMany();
 
-  await User.create({
-    firstName: 'test',
-    lastName: 'test',
-    username: "test1234",
-    email: 'test@testmail.com',
-    password: 'password12345'
-  });
+  // create user data
+  const userData = [];
 
-  await User.create({
-    firstName: 'test2',
-    lastName: 'test2',
-    username: "test12345",
-    email: 'test2@testmail.com',
-    password: 'password12345'
-  });
+  for (let i = 0; i<50; i += 1){
+    const firstName = faker.name.firstName();
+    const lastName = faker.name.lastName();
+    const username = faker.internet.userName();
+    const email = faker.internet.email(username);
+    const password = faker.internet.password();
 
-  await User.create({
-    firstName: 'test3',
-    lastName: 'test3',
-    username: "test3",
-    email: 'test3@testmail.com',
-    password: 'password12345'
-  });
+    userData.push({ firstName, lastName, username, email, password});
+  }
 
-  
+  const createdUsers = await User.collection.insertMany(userData);
 
-  console.log('users seeded');
+  // create events
+  let createdEvents = [];
+  for (let i = 0; i < 50; i += 1) {
+    const eventName = faker.lorem.words(Math.round(Math.random() * 10) + 1);
+    const eventText = faker.lorem.words(Math.round(Math.random() * 30) + 1);
 
-  process.exit();
+    const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
+    const { username, _id: userId } = createdUsers.ops[randomUserIndex];
+
+    const createdEvent = await Event.create({ eventName, eventText, username });
+
+    const updatedUser = await User.updateOne(
+      { _id: userId },
+      { $push: { events: createdEvent._id } }
+    );
+
+    createdEvents.push(createdEvent);
+  }  
+
+  console.log('users/events seeded');
+
+  process.exit(0);
 });
