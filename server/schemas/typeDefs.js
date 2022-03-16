@@ -10,23 +10,13 @@ const typeDefs = gql`
     username: String
     email: String
     eventCount: Int
-    postCount: Int
     events: [Event]
-    posts: [Post]
   }
 
   type Event {
     _id: ID
-    username: String
     eventName: String
     eventText: String
-    createdAt: String
-  }
-
-  type Post {
-    _id: ID
-    postName: String
-    postText: String
     createdAt: String
     username: String
     commentCount: Int
@@ -46,23 +36,19 @@ const typeDefs = gql`
     user(username: String!): User
     events(username: String): [Event]
     event(_id: ID!): Event
-    posts(username: String): [Post]
-    post(_id: ID!): Post
-  }
-
-  type Auth {
-    token: ID!
-    user: User
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
     addEvent(username: String!, eventName: String!, eventText: String!): Event
-    addPost(postText: String!): Post
-    addComment(postId: ID!, commentBody: String!): Post   
+    addComment(eventId: ID!, commentBody: String!): Event   
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
  
 `;
 
