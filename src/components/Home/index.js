@@ -4,14 +4,8 @@ import { Container, Button, Form } from "react-bootstrap";
 const Home = () => {
   return (
     <Container fluid>
-      <img
-        className="d-block w-100"
-        src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/gallery/src/assets/images/Event9.jpeg?raw=true"
-        alt="Event 2"
-      />
-      <hr />
       <br />
-      <Form class="form">
+      <Form className="form">
         <h1> Member Login </h1>
         <br />
         <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -8,6 +8,9 @@ import Culture from "./components/Culture-History";
 import Membership from "./components/Membership";
 import Footer from "./components/Footer";
 import EventsForm from "./components/EventForm";
+import '@fontsource/roboto';
+
+import OnePirate from "./components/OnePirate";
 
 import Home from "./components/Home";
 
@@ -24,6 +27,7 @@ function App() {
 
   return (
     <div>
+      <OnePirate />
       <Container>
         <CustomNav
           homeSelected={homeSelected}

@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 const Gallery = () => {
   return (
     <Container>
-      <section class="form">
+      <section className="form">
         <img
           alt="group-lunch"
           src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event.jpeg?raw=true"

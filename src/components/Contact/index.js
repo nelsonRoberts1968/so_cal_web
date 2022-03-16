@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button, Row, Col} from "react-bootstrap";
 
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
@@ -25,24 +25,29 @@ const Contact = () => {
   };
   return (
     <>
-      <Form class="form" onSubmit={handleSubmit}>
-        <h1>Contact</h1>
-        <div>
-          <Form.Label>Full Name: </Form.Label>
-          <Form.Control type="name" placeholder="Enter name" />
-        </div>
-        <br />
-        <div>
-          <Form.Label>Email address: </Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </div>
-        <br />
-        <div>
-          <Form.Label>Message: </Form.Label>
-          <textarea placeholder="Enter Message" id="message" required />
-        </div>
-        <button type="submit">{status}</button>
-      </Form>
+
+    <Form>
+      <Form.Group as={Col} controlId="formGridName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="name" placeholder="Enter your full name" />
+      </Form.Group>
+      <Form.Group as={Col} controlId="formGridContact">
+        <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="user@example.com" />
+          <Form.Label>Phone number</Form.Label>
+          <Form.Control type="phone" placeholder="(555)555-5555" />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Message: </Form.Label>
+          <Form.Control type="text" placeholder="Enter Message" id="message" required />
+      </Form.Group>
+      <Form.Group className="mb-3" id="formGridCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
     </>
   );
 };

@@ -2,6 +2,11 @@ import { React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { DatePicker } from '@mui/lab';
+import { CalendarPicker } from '@mui/lab';
+import { TextField } from '@mui/material';
 
 
 function EventsForm() {
@@ -50,62 +55,66 @@ function EventsForm() {
     };
 
     return (
-        <Container className='form-container'>
-            <form className="event-form" onSubmit={handleSubmit}>
-                <label className='event-form-title'>Add an upcoming event!</label>
-                <label>Title</label>
-                <input
-                    type='text'
-                    value={title}
-                    placeholder="Title"
-                    onChange={(e) => setTitle(e.target.value)} />
-                <label>Description</label>
-                <input
-                    type='text'
-                    value={description}
-                    placeholder="Enter a short description"
-                    className='event-description'
-                    onChange={(e) => setDescription(e.target.value)} />
-                <label>Contact</label>
-                <input
-                    type='text'
-                    value={contact}
-                    placeholder="Your name"
-                    onChange={(e) => setContact(e.target.value)} />
-                <label>Contact Info</label>
-                <input
-                    type='text'
-                    value={contactInfo}
-                    placeholder="Your phone number and/or email"
-                    className='event-contact-info'
-                    onChange={(e) => setContactInfo(e.target.value)} />
-                <label>Location</label>
-                <input
-                    type='text'
-                    value={location}
-                    placeholder="Event location"
-                    className='event-location'
-                    onChange={(e) => setLocation(e.target.value)} />
-                <label>Date/Time</label>
-                <input
-                    type='text'
-                    value={date}
-                    placeholder="01/01/2022 5:00-7:00 PM"
-                    className='event-date-time'
-                    onChange={(e) => setDate(e.target.value)} />
-                <label>Link</label>
-                <input
-                    type='text'
-                    value={link}
-                    placeholder="https://"
-                    className='event-link'
-                    onChange={(e) => setLink(e.target.value)} />
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <Container className='form-container'>
+                <form className="event-form" onSubmit={handleSubmit}>
+                    <label className='event-form-title'>Add an upcoming event!</label>
+                    <label>Title</label>
+                    <input
+                        type='text'
+                        value={title}
+                        placeholder="Title"
+                        onChange={(e) => setTitle(e.target.value)} />
+                    <label>Description</label>
+                    <input
+                        type='text'
+                        value={description}
+                        placeholder="Enter a short description"
+                        className='event-description'
+                        onChange={(e) => setDescription(e.target.value)} />
+                    <label>Contact</label>
+                    <input
+                        type='text'
+                        value={contact}
+                        placeholder="Your name"
+                        onChange={(e) => setContact(e.target.value)} />
+                    <label>Contact Info</label>
+                    <input
+                        type='text'
+                        value={contactInfo}
+                        placeholder="Your phone number and/or email"
+                        className='event-contact-info'
+                        onChange={(e) => setContactInfo(e.target.value)} />
+                    <label>Location</label>
+                    <input
+                        type='text'
+                        value={location}
+                        placeholder="Event location"
+                        className='event-location'
+                        onChange={(e) => setLocation(e.target.value)} />
+                    <label>Date/Time</label>
+                    <DatePicker
+                        views={['day', 'month', 'year']}
+                        value={date}
+                        onChange={(e) => {
+                            setDate(e.target.value);
+                        }}
+                        renderInput={(params) => <TextField {...params} helperText={null} />}
+                    />
+                    <label>Link</label>
+                    <input
+                        type='text'
+                        value={link}
+                        placeholder="https://"
+                        className='event-link'
+                        onChange={(e) => setLink(e.target.value)} />
 
-                <button type="submit" className='event-submit-btn'>Submit</button>
+                    <button type="submit" className='event-submit-btn'>Submit</button>
 
-                <div className='message'>{message ? <p>{message}</p> : null}</div>
-            </form>
-        </Container>
+                    <div className='message'>{message ? <p>{message}</p> : null}</div>
+                </form>
+            </Container>
+        </LocalizationProvider>
     );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import bg_timelapse from '../../assets/images/bg_timelapse.mp4'
 
 function CustomNav(props) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -69,10 +70,11 @@ function CustomNav(props) {
 
   return (
     <>
-      <header>
-        <Navbar class="navBar">
-          <Container>
-            <Navbar.Brand href="#home">
+      <video autoPlay loop muted id='videobg'>
+        <source src={bg_timelapse} type='video/mp4' />
+      </video>
+        <Navbar className="navBar">
+            {/* <Navbar.Brand href="#home">
               <div className="group-logo">
                 <img
                   alt=""
@@ -82,10 +84,8 @@ function CustomNav(props) {
                   className="cover-img"
                 />{" "}
               </div>
-            </Navbar.Brand>
+            </Navbar.Brand> */}
 
-            <Navbar.Collapse>
-              <Nav className="me-auto">
                 {homeSelected ? (
                   <>
                     <Nav.Link id="nav-selected">Home</Nav.Link>
@@ -173,12 +173,7 @@ function CustomNav(props) {
                 {/* <button onClick={toggleNav} className="h-menu">
        Menu
      </button> */}
-              </Nav>
-            </Navbar.Collapse>
-            <hr />
-          </Container>
         </Navbar>
-      </header>
     </>
   );
 }

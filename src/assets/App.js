@@ -7,6 +7,7 @@ import Calendar from "../components/Calendar";
 import Culture from "../components/Culture-History";
 import Membership from "../components/Membership";
 import Footer from "../components/Footer";
+import OnePirate from "../components/OnePirate";
 
 import { Container } from "react-bootstrap";
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div>
+      <OnePirate />
       <Container>
         <CustomNav
           contactSelected={contactSelected}
