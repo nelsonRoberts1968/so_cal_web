@@ -70,7 +70,7 @@ function CustomNav(props) {
   return (
     <>
       <header>
-        <Navbar class="navBar">
+        <Navbar className="navBar">
           <Container>
             <Navbar.Brand href="#home">
               <div className="group-logo">
