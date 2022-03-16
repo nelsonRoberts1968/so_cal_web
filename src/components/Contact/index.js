@@ -3,9 +3,17 @@ import { Form } from "react-bootstrap";
 import emailjs from "emailjs-com";
 import { render } from "@testing-library/react";
 
-const Contact = () => {
-  const [homeSelected, setHomeSelected] = useState(true);
-  function sendEmail(e) {
+const Result = () => {
+  return (
+    <p>
+      Your message has been sucessfully sent,Management will get back to you as
+      soon as possible!!
+    </p>
+  );
+};
+function Contact(props) {
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
@@ -14,18 +22,21 @@ const Contact = () => {
         e.target,
         "G1xb6293eXOTE8M2W"
       )
-      .then((res) => {
-        console.log(res);
-        //return home component upon succeful send
-        // render(){
-        //   return(
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    showResult(true);
+  };
 
-        //   )
-        // }
-      })
-      .catch((err) =>
-       console.log(err));
-  }
+  setTimeout(() => {
+    showResult(false);
+  }, 5000);
 
   return (
     <div className="container-border">
@@ -36,7 +47,7 @@ const Contact = () => {
 
         <label>Email:</label>
         <input type="email" name="user_email" className="form-control" />
-
+        <div>
         <label>Message:</label>
         <textarea name="message" rows="4" className="form-control" />
         <input
@@ -44,9 +55,11 @@ const Contact = () => {
           value="Send"
           className="send-button form-control btn btn-primary"
         />
+         <div className="success-text row"> {result ? <Result /> : null}</div>
+         </div>
       </form>
     </div>
   );
-};
+}
 
 export default Contact;

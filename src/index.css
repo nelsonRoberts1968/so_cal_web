@@ -626,7 +626,7 @@ h3 {
 .container-border{
   margin-top: 50px;
   width:'50%';
-  background-image: url('assets/images/kilimanjaro.jpeg');
+  /* background-image: url('assets/images/kilimanjaro.jpeg'); */
   background-position: center;
   background-size: cover;
   height: 700px;
@@ -643,4 +643,10 @@ h3 {
 
 .send-button {
   margin-top: 50px;
+}
+
+.success-text{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 8px;
 }
