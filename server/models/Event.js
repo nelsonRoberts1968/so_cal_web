@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const commentSchema = require('./Comment')
 const dateFormat = require('../utils/dateFormat');
 
 const eventSchema = new Schema(
@@ -24,8 +25,13 @@ const eventSchema = new Schema(
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
+    comments: [commentSchema]
   }
 );
+
+eventSchema.virtual('commentCount').get(function() {
+  return this.comments.length;
+});
 
 const Event = mongoose.model('Event', eventSchema);
 
