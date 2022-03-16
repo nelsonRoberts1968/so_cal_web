@@ -7,12 +7,16 @@ import Calendar from "./components/Calendar";
 import Culture from "./components/Culture-History";
 import Membership from "./components/Membership";
 import Footer from "./components/Footer";
-// import Carousel from "./components/Carousel";
+import EventsForm from "./components/EventForm";
+
 import Home from "./components/Home";
 
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 
 function App() {
+
+
+  // const [isLoggedIn, setIsLoggedIn ] = useState (false);
   const [homeSelected, setHomeSelected] = useState(true);
   const [contactSelected, setContactSelected] = useState(false);
   const [aboutSelected, setAboutSelected] = useState(false);
@@ -21,10 +25,30 @@ function App() {
   const [gallerySelected, setGallerySelected] = useState(false);
   const [membershipSelected, setMembershipSelected] = useState(false);
 
+
+  //conditional rendering logic starts here
   return (
     <div>
-      {/* <Carousel></Carousel> */}
       <Container>
+        {/* {isLoggedIn?
+        <CustomNav
+        homeSelected={homeSelected}
+        setHomeSelected={setHomeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        calendarSelected={calendarSelected}
+        setCalendarSelected={setCalendarSelected}
+        cultureSelected={cultureSelected}
+        setCultureSelected={setCultureSelected}
+        gallerySelected={gallerySelected}
+        setGallerySelected={setGallerySelected}
+        membershipSelected={membershipSelected}
+        setMembershipSelected={setMembershipSelected}
+        sticky="top"
+      ></CustomNav> : 
+      
         <CustomNav
           homeSelected={homeSelected}
           setHomeSelected={setHomeSelected}
@@ -32,16 +56,31 @@ function App() {
           setContactSelected={setContactSelected}
           aboutSelected={aboutSelected}
           setAboutSelected={setAboutSelected}
-          calendarSelected={calendarSelected}
-          setCalendarSelected={setCalendarSelected}
           cultureSelected={cultureSelected}
           setCultureSelected={setCultureSelected}
-          gallerySelected={gallerySelected}
-          setGallerySelected={setGallerySelected}
           membershipSelected={membershipSelected}
           setMembershipSelected={setMembershipSelected}
           sticky="top"
         ></CustomNav>
+} */}
+
+<CustomNav
+        homeSelected={homeSelected}
+        setHomeSelected={setHomeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        calendarSelected={calendarSelected}
+        setCalendarSelected={setCalendarSelected}
+        cultureSelected={cultureSelected}
+        setCultureSelected={setCultureSelected}
+        gallerySelected={gallerySelected}
+        setGallerySelected={setGallerySelected}
+        membershipSelected={membershipSelected}
+        setMembershipSelected={setMembershipSelected}
+        sticky="top"
+      ></CustomNav>
       </Container>
 
       <main>
@@ -53,13 +92,6 @@ function App() {
           ) : (
             <></>
           )}
-          {aboutSelected ? (
-            <>
-              <About></About>
-            </>
-          ) : (
-            <></>
-          )}
           {cultureSelected ? (
             <>
               <Culture></Culture>
@@ -67,10 +99,22 @@ function App() {
           ) : (
             <></>
           )}
-          {calendarSelected ? (
+          {aboutSelected ? (
             <>
-              <Calendar></Calendar>
+              <About></About>
             </>
+          ) : (
+            <></>
+          )}
+          {calendarSelected ? (
+            <div className="events-page">
+              <Card>
+                <Calendar></Calendar>
+              </Card>
+              <Card>
+                <EventsForm />
+              </Card>
+            </div>
           ) : (
             <></>
           )}
@@ -96,6 +140,7 @@ function App() {
           ) : (
             <></>
           )}
+          
         </Container>
       </main>
       <footer>
