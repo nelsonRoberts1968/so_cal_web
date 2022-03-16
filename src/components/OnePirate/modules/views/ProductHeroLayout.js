@@ -1,9 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import HeroBg from '../components/HeroBg';
 
 const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
     color: theme.palette.common.white,
@@ -11,7 +12,7 @@ const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
-        height: '80vh',
+        height: '60vh',
         minHeight: 500,
         maxHeight: 1300,
     },
@@ -42,12 +43,6 @@ function ProductHeroLayout(props) {
                     alignItems: 'center',
                 }}
             >
-                <img
-                    src="/static/themes/onepirate/productHeroWonder.png"
-                    alt="wonder"
-                    width="147"
-                    height="80"
-                />
                 {children}
                 <Box
                     sx={{
@@ -61,13 +56,10 @@ function ProductHeroLayout(props) {
                         zIndex: -1,
                     }}
                 />
-                <Background sx={sxBackground} />
-                <Box
-                    component="img"
-                    src="/static/themes/onepirate/productHeroArrowDown.png"
-                    height="16"
-                    width="12"
-                    alt="arrow down"
+                <HeroBg/>
+                <Background sx={sxBackground}/>
+                <KeyboardArrowDownIcon
+                fontSize='large'
                     sx={{ position: 'absolute', bottom: 32 }}
                 />
             </Container>

@@ -68,6 +68,12 @@ export default function AppFooter() {
                                 <Box component="a" href="https://instagram.com/socal_tanzanian_community?igshid=1gqnfxb59dvh3" sx={iconStyle}>
                                     <InstapaperIcon size={36} />
                                 </Box>
+                                <Box component="a" href="https://chat.whatsapp.com/IDPdLOsAEpL4a5k9ORk3AE" sx={iconStyle}>
+                                    <WhatsappIcon size={36} />
+                                </Box>
+                                <Box component="a" href="#contact" sx={iconStyle}>
+                                    <EmailIcon size={36} /> 
+                                </Box>
                             </Grid>
                             <Grid item>
                                 <Copyright />
@@ -75,17 +81,7 @@ export default function AppFooter() {
                         </Grid>
                     </Grid>
                     <Grid item xs={6} sm={4} md={2}>
-                        <Typography variant="h6" marked="left" gutterBottom>
-                            Legal
-                        </Typography>
-                        <Box component="ul" sx={{ m: 0, listStyle: 'none', p: 0 }}>
-                            <Box component="li" sx={{ py: 0.5 }}>
-                                <Link href="/">Terms</Link>
-                            </Box>
-                            <Box component="li" sx={{ py: 0.5 }}>
-                                <Link href="/">Privacy</Link>
-                            </Box>
-                        </Box>
+                        
                     </Grid>
                     <Grid item xs={6} sm={8} md={4}>
                         <Typography variant="h6" marked="left" gutterBottom>
@@ -107,6 +103,15 @@ export default function AppFooter() {
                             ))}
                         </TextField>
                     </Grid>
+
+                    <Grid item>
+                SoCal Tanzanian community (Entity Number: C4564114) is a registered nonprofit membership organization, based in Southern California. Members are
+                                the heartbeat of the SoCal Tanzanian Community. The agreement of the
+                                Southern California Tanzanian Community entered by and between the
+                                SoCal and its members effective as of February 07-2020. Whereas the
+                                members formed the SoCal as a nonprofit Mutual benefit corporation
+                                under the laws of California.
+                        </Grid>
                 </Grid>
             </Container>
         </Typography>

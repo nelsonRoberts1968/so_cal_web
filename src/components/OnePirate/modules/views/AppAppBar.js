@@ -23,15 +23,14 @@ function AppAppBar() {
                         href="/"
                         sx={{ fontSize: 24 }}
                     >
-                        {'SoCal Tanzanian Community'}
                     </Link>
-                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end'}}>
                         <Link
-                            color="inherit"
+                            color="#f3a847"
                             variant="h6"
                             underline="none"
                             href="/login/"
-                            sx={rightLink}
+                            sx={{rightLink}}
                         >
                             {'Sign In'}
                         </Link>
