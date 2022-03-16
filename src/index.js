@@ -1,16 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import '@fontsource/roboto';
+import Navigation from './components/Nav';
+import Footer from './components/Footer';
+import Events from './components/Events';
+import Login from './components/Login';
+import Membership from './components/Membership';
+import Home from './components/Home';
+import theme from './theme'
+import {ThemeProvider} from '@mui/styles'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+  <Router>
+    <Navigation />
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/membership' element={<Membership />} />
+      <Route path='/events' element={<Events />} />
+    </Routes>
+    <Footer />
+  </Router>
+  </ThemeProvider>,
+
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-
+// serviceWorker.unregister();

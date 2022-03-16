@@ -1,36 +1,19 @@
-import React from "react";
-import { Container, Button, Form } from "react-bootstrap";
+import * as React from 'react';
+import Contact from './Contact';
+import withRoot from '../../withRoot';
+import About from './About';
+import Gallery from './Gallery';
+import Mission from './Mission';
 
-const Home = () => {
+function Home() {
   return (
-    <Container fluid>
-      <br />
-      <Form className="form">
-        <h1> Member Login </h1>
-        <br />
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <div>
-            <span>
-              <Form.Label>Email address: </Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </span>
-          </div>
-        </Form.Group>
-        <br />
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password: </Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Login
-        </Button>
-        <Button variant="primary" type="submit">
-          Register
-        </Button>
-      </Form>
-    </Container>
+    <React.Fragment>
+      <Gallery />
+      <About />
+      <Mission />
+      <Contact />
+    </React.Fragment>
   );
-};
+}
 
-export default Home;
+export default withRoot(Home);
