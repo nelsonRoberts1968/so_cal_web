@@ -14,6 +14,9 @@ import Home from "./components/Home";
 import { Container, Card } from "react-bootstrap";
 
 function App() {
+
+
+  // const [isLoggedIn, setIsLoggedIn ] = useState (false);
   const [homeSelected, setHomeSelected] = useState(true);
   const [contactSelected, setContactSelected] = useState(false);
   const [aboutSelected, setAboutSelected] = useState(false);
@@ -22,9 +25,30 @@ function App() {
   const [gallerySelected, setGallerySelected] = useState(false);
   const [membershipSelected, setMembershipSelected] = useState(false);
 
+
+  //conditional rendering logic starts here
   return (
     <div>
       <Container>
+        {/* {isLoggedIn?
+        <CustomNav
+        homeSelected={homeSelected}
+        setHomeSelected={setHomeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        calendarSelected={calendarSelected}
+        setCalendarSelected={setCalendarSelected}
+        cultureSelected={cultureSelected}
+        setCultureSelected={setCultureSelected}
+        gallerySelected={gallerySelected}
+        setGallerySelected={setGallerySelected}
+        membershipSelected={membershipSelected}
+        setMembershipSelected={setMembershipSelected}
+        sticky="top"
+      ></CustomNav> : 
+      
         <CustomNav
           homeSelected={homeSelected}
           setHomeSelected={setHomeSelected}
@@ -32,16 +56,31 @@ function App() {
           setContactSelected={setContactSelected}
           aboutSelected={aboutSelected}
           setAboutSelected={setAboutSelected}
-          calendarSelected={calendarSelected}
-          setCalendarSelected={setCalendarSelected}
           cultureSelected={cultureSelected}
           setCultureSelected={setCultureSelected}
-          gallerySelected={gallerySelected}
-          setGallerySelected={setGallerySelected}
           membershipSelected={membershipSelected}
           setMembershipSelected={setMembershipSelected}
           sticky="top"
         ></CustomNav>
+} */}
+
+<CustomNav
+        homeSelected={homeSelected}
+        setHomeSelected={setHomeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        calendarSelected={calendarSelected}
+        setCalendarSelected={setCalendarSelected}
+        cultureSelected={cultureSelected}
+        setCultureSelected={setCultureSelected}
+        gallerySelected={gallerySelected}
+        setGallerySelected={setGallerySelected}
+        membershipSelected={membershipSelected}
+        setMembershipSelected={setMembershipSelected}
+        sticky="top"
+      ></CustomNav>
       </Container>
 
       <main>
@@ -53,16 +92,16 @@ function App() {
           ) : (
             <></>
           )}
-          {aboutSelected ? (
+          {cultureSelected ? (
             <>
-              <About></About>
+              <Culture></Culture>
             </>
           ) : (
             <></>
           )}
-          {cultureSelected ? (
+          {aboutSelected ? (
             <>
-              <Culture></Culture>
+              <About></About>
             </>
           ) : (
             <></>
@@ -101,6 +140,7 @@ function App() {
           ) : (
             <></>
           )}
+          
         </Container>
       </main>
       <footer>

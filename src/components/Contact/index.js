@@ -1,49 +1,51 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import emailjs from "emailjs-com";
+import { render } from "@testing-library/react";
 
 const Contact = () => {
-  const [status, setStatus] = useState("Submit");
-  const handleSubmit = async (e) => {
+  const [homeSelected, setHomeSelected] = useState(true);
+  function sendEmail(e) {
     e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
-  };
+    emailjs
+      .sendForm(
+        "service_lgdlwvp",
+        "template_dt5m3ro",
+        e.target,
+        "G1xb6293eXOTE8M2W"
+      )
+      .then((res) => {
+        console.log(res);
+        //return home component upon succeful send
+        // render(){
+        //   return(
+
+        //   )
+        // }
+      })
+      .catch((err) =>
+       console.log(err));
+  }
+
   return (
-    <>
-      <Form class="form" onSubmit={handleSubmit}>
-        <h1>Contact</h1>
-        <div>
-          <Form.Label>Full Name: </Form.Label>
-          <Form.Control type="name" placeholder="Enter name" />
-        </div>
-        <br />
-        <div>
-          <Form.Label>Email address: </Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </div>
-        <br />
-        <div>
-          <Form.Label>Message: </Form.Label>
-          <textarea placeholder="Enter Message" id="message" required />
-        </div>
-        <button type="submit">{status}</button>
-      </Form>
-    </>
+    <div className="container-border">
+      <form className="contact-form" onSubmit={sendEmail}>
+        <h1 className="contact-form-title">Contact Form</h1>
+        <label>Full Name:</label>
+        <input type="text" name="name" className="form-control" />
+
+        <label>Email:</label>
+        <input type="email" name="user_email" className="form-control" />
+
+        <label>Message:</label>
+        <textarea name="message" rows="4" className="form-control" />
+        <input
+          type="submit"
+          value="Send"
+          className="send-button form-control btn btn-primary"
+        />
+      </form>
+    </div>
   );
 };
 

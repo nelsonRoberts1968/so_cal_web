@@ -12,6 +12,7 @@
     "body-parser": "^1.19.2",
     "cra-template-nextgen-react": "^1.1.9",
     "dotenv": "^16.0.0",
+    "emailjs-com": "^3.2.0",
     "moment": "^2.29.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

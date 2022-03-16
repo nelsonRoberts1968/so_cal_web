@@ -621,3 +621,26 @@ h3 {
 .dot.active {
   background: rgb(32, 32, 32);
 }
+
+/*contact form component styles */
+.container-border{
+  margin-top: 50px;
+  width:'50%';
+  background-image: url('assets/images/kilimanjaro.jpeg');
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  border-radius: 20px;
+
+}
+.contact-form-title{
+  margin-top: 25px;
+}
+
+.contact-form{
+  margin:50px 85px 80px 120px;
+}
+
+.send-button {
+  margin-top: 50px;
+}
