@@ -12,48 +12,44 @@ export default function Slider() {
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img1.jpeg"
-                  className="cover-img"
-                />{" "}
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img1.jpeg"
+                  width="400"
+                  height="400"
+           
+                />
                 <p>President</p>
               </item>
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img2.jpeg"
-                  width="180"
-                  height="180"
-                  className="cover-img"
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img2.jpeg"
+                  width="400"
+                  height="400"
                 />
                 <p> Vice President</p>
               </item>
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img2.jpeg"
-                  width="150"
-                  height="150"
-                  className="cover-img"
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img4.jpeg"
                 />
                 <p>President</p>
               </item>
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img3.jpeg"
-                  width="150"
-                  height="150"
-                  className="cover-img"
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img8.jpeg"
+                  width="400"
+                  height="400"
                 />
                 <p>President</p>
               </item>
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img4.jpeg"
-                  width="150"
-                  height="150"
-                  className="cover-img"
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img9.jpeg"
+                  width="400"
+                  height="400"
                 />
                 <p>President</p>
               </item>
@@ -61,20 +57,19 @@ export default function Slider() {
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img4.jpeg"
-                  width="150"
-                  height="150"
-                  className="cover-img"
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img5.jpeg"
+                  width="400"
+                  height="400"
                 />
                 <p>President</p>
               </item>
               <item>
                 <img
                   alt=""
-                  src="so_cal/src/assets/images/leadershipimages/img5.jpeg"
-                  width="150"
-                  height="150"
-                  className="cover-img"
+                  src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img6.jpeg"
+                  width="400"
+                  height="400"
+      
                 />
                 <p>President</p>
               </item>
