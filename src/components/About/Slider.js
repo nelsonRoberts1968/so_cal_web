@@ -8,31 +8,36 @@ export default function Slider() {
     <div className="container-slider">
       <>
         <Carousel className="image-corousel">
-          <item>
+          <item className="image-container-l">
             <img
               alt="president"
               src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img1.jpeg?raw=true"
               width="400"
               height="400"
             />
-            <p>President</p>
+             <h3>Glen Bautista</h3>
+            <p>Communication Officer</p>
+        
           </item>
-          <item>
+          <item className="image-container-l">
             <img
               alt="Vice-president"
               src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img5.jpeg?raw=true"
               width="400"
               height="400"
             />
-            <p> Vice President</p>
+            <h3>George Mlanzi</h3>
+            <p>President</p>
+           
           </item>
-          <item>
+          {/* <item className="image-container-l">
             <img
               alt=""
               src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img4.jpeg?raw=true"
             />
+            <h3>George Mlanzi</h3>
             <p>President</p>
-          </item>
+          </item> */}
           <item>
             <img
               alt=""
@@ -40,35 +45,39 @@ export default function Slider() {
               width="400"
               height="400"
             />
-            <p>President</p>
+            <h3>Khalipha Majid</h3>
+            <p>Board Member</p>
           </item>
-          <item>
+          <item className="image-container-l">
             <img
               alt=""
               src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img9.jpeg?raw=true"
               width="400"
               height="400"
             />
-            <p>President</p>
+            <h3>Lilian Mgonja</h3>
+            <p>Board Member</p>
           </item>
 
-          <item>
+          <item className="image-container-l">
             <img
               alt="Vice-president"
               src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img12.jpeg?raw=true"
               width="400"
               height="400"
             />
-            <p>President</p>
+            <h3>Safia Navarro-Shanghvi</h3>
+            <p>Board Member</p>
           </item>
-          <item>
+          <item className="image-container-l">
             <img
               alt=""
               src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img6.jpeg?raw=true"
               width="400"
               height="400"
             />
-            <p>President</p>
+            <h3>Ruth Nkya</h3>
+            <p>Director Of Intertainment</p>
           </item>
         </Carousel>
       </>

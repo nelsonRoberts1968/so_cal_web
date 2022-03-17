@@ -653,3 +653,14 @@ h3 {
 .image-corousel{
   margin-top: 50px;
 }
+
+.image-container-l{
+  border-radius: 20px;
+}
+.container-slider{
+  height: 600px;
+  width: 600px;
+}
+.cotainer-slider p{
+  align-items: center;
+}
