@@ -1,73 +1,85 @@
-import React, {useState} from 'react'
-import BtnSlider from './BtnSlider'
-import dataSlider from './dataSlider'
+import React, { useState } from "react";
+import BtnSlider from "./BtnSlider";
+import dataSlider from "./dataSlider";
+import Carousel from "react-elastic-carousel";
 
 export default function Slider() {
+   
+        return (
+            <div className="container-slider">
+          <>
+            <Carousel className="image-corousel">
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img1.jpeg"
+                  className="cover-img"
+                />{" "}
+                <p>President</p>
+              </item>
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img2.jpeg"
+                  width="180"
+                  height="180"
+                  className="cover-img"
+                />
+                <p> Vice President</p>
+              </item>
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img2.jpeg"
+                  width="150"
+                  height="150"
+                  className="cover-img"
+                />
+                <p>President</p>
+              </item>
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img3.jpeg"
+                  width="150"
+                  height="150"
+                  className="cover-img"
+                />
+                <p>President</p>
+              </item>
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img4.jpeg"
+                  width="150"
+                  height="150"
+                  className="cover-img"
+                />
+                <p>President</p>
+              </item>
 
-    const [slideIndex, setSlideIndex] = useState(1)
-
-    const nextSlide = () => {
-        if(slideIndex !== dataSlider.length){
-            setSlideIndex(slideIndex + 1)
-        } 
-        else if (slideIndex === dataSlider.length){
-            setSlideIndex(1)
-        }
-    }
-
-    const prevSlide = () => {
-        if(slideIndex !== 1){
-            setSlideIndex(slideIndex - 1)
-        }
-        else if (slideIndex === 1){
-            setSlideIndex(dataSlider.length)
-        }
-    }
-
-    const moveDot = index => {
-        setSlideIndex(index)
-    }
-
-    return (
-        <>
-        <div className="container-slider">
-            {dataSlider.map((obj, index) => {
-                return (
-                    <>
-                    <div
-                    key={obj.id}
-                    className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-                    >
-                        <img 
-
-                     
-    //     src="https://github.com/nelsonRoberts1968/so_cal_web/blob/feature/about/src/assets/images/Event10.jpeg?raw=true"
-    //     className="my-2"
-    //     style={{ width: "100%" }}
-    //     alt="cover"
-    //   />
-    
-                        src={process.env.PUBLIC_URL + `/src/assets/images/leadershipimages/img${index + 1}.jpeg`} className="my-2"style={{ width: "100%" }}
-                        
-                        alt="Group Leader"
-                        /> 
-                    </div>
-                      <p>President</p>
-                    </>
-                )
-            })}
-            <BtnSlider moveSlide={nextSlide} direction={"next"} />
-            <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
-
-            <div className="container-dots">
-                {Array.from({length: 12}).map((item, index) => (
-                    <div 
-                    onClick={() => moveDot(index + 1)}
-                    className={slideIndex === index + 1 ? "dot active" : "dot"}
-                    ></div>
-                ))}
-            </div>
-        </div>
-        </>
-    )
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img4.jpeg"
+                  width="150"
+                  height="150"
+                  className="cover-img"
+                />
+                <p>President</p>
+              </item>
+              <item>
+                <img
+                  alt=""
+                  src="so_cal/src/assets/images/leadershipimages/img5.jpeg"
+                  width="150"
+                  height="150"
+                  className="cover-img"
+                />
+                <p>President</p>
+              </item>
+            </Carousel>
+          </>
+    </div>
+  );
 }
