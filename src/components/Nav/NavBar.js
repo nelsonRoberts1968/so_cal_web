@@ -15,22 +15,22 @@ function NavBar() {
         <div>
             <AppBar position="fixed">
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    <Box sx={{ flex: 1 }} />
+                    <Box sx={{ flex: 0, display: 'flex', justifyContent: 'flex-end' }} />
                     <Link
                         variant="h6"
-                        underline="none"
-                        color="inherit"
+                        underline='none'
                         href="/"
-                        sx={{ fontSize: 24 }}
+                        sx={{ rightLink, color: 'inherit' }}
                     >
+                        {'Home'}
                     </Link>
-                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end'}}>
+                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
                         <Link
                             color="#f3a847"
                             variant="h6"
                             underline="none"
                             href="/login/"
-                            sx={{rightLink}}
+                            sx={{ rightLink }}
                         >
                             {'Sign In'}
                         </Link>

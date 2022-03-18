@@ -6,7 +6,7 @@ function Culture() {
       <img
         src="https://rlv.zcache.com/tanzania_coat_of_arms_poster-r57f76df0b51f48deaef3b50d4264e4d0_2o0d_8byvr_704.jpg"
         alt="coat of arms"
-        class="img-col"
+        className="img-col"
       />
       <br />
       <h1 id="culture">Culture in Tanzania</h1>

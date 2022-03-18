@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Paper from '../Paper';
 import Typography from '../Typography';
+import Button from '../Button';
 
 function About(props) {
     const { children } = props;
@@ -11,6 +12,7 @@ function About(props) {
         <Box
             sx={{
                 display: 'flex',
+                alignItems: 'center',
             }}
         >
             <Container maxWidth="lg">
@@ -23,13 +25,27 @@ function About(props) {
                             Who We Are
                         </Typography>
                         <hr />
-                        <div className="my-2">
+                        <Box sx={{
+                            alignItems: 'center',
+                            className: 'my-2'
+
+                        }} >
                             <p>
                                 The SoCal Tanzanian Community is a group of people from Tanzania
                                 living in Southern California consciously collaborating on the basis
                                 of their belonging to the same country of origin.
                             </p>
-                        </div>
+                            <Button
+                                color="secondary"
+                                size="large"
+                                variant="contained"
+                                component="a"
+                                href="/culture"
+                                sx={{ mt: 8 }}
+                            >
+                                Learn More
+                            </Button>
+                        </Box>
 
                     </Paper>
                 </Box>
