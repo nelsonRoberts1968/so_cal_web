@@ -1,46 +1,41 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
-import emailjs from "emailjs-com";
-import { render } from "@testing-library/react";
 
-const Result = () => {
-  return (
-    <p>
-      Your message has been sucessfully sent,Management will get back to you as
-      soon as possible!!
-    </p>
-  );
-};
-function Contact(props) {
-  const [result, showResult] = useState(false);
-  const sendEmail = (e) => {
+
+function Contact() {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [alert, setAlert] = useState('');
+
+  let handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_lgdlwvp",
-        "template_dt5m3ro",
-        e.target,
-        "G1xb6293eXOTE8M2W"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-    showResult(true);
+    try {
+      let res = await fetch('http:localhost:3001/api/contact',
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            fullName: fullName,
+            email: email,
+            message: message
+          })
+        });
+      let resJson = await res.json();
+      if (res.status === 200) {
+        setFullName('');
+        setEmail('');
+        setMessage('');
+        setAlert('Your message has been sent! Someone will be with you shortly.')
+      } else {
+        setAlert('An error occured. Please try again! Make sure that all fields are completed and you are using a valid email address.')
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
-
-  setTimeout(() => {
-    showResult(false);
-  }, 5000);
 
   return (
     <div className="container-border">
-      <form className="contact-form" onSubmit={sendEmail}>
+      <form className="contact-form" onSubmit={handleSubmit}>
         <h1 className="contact-form-title">Contact Form</h1>
         <label>Full Name:</label>
         <input type="text" name="name" className="form-control" />
@@ -48,15 +43,15 @@ function Contact(props) {
         <label>Email:</label>
         <input type="email" name="user_email" className="form-control" />
         <div>
-        <label>Message:</label>
-        <textarea name="message" rows="4" className="form-control" />
-        <input
-          type="submit"
-          value="Send"
-          className="send-button form-control btn btn-primary"
-        />
-         <div className="success-text row"> {result ? <Result /> : null}</div>
-         </div>
+          <label>Message:</label>
+          <textarea name="message" rows="4" className="form-control" />
+          <input
+            type="submit"
+            value="Send"
+            className="send-button form-control btn btn-primary"
+          />
+          <div className="success-text row"> {setAlert ? setAlert : null}</div>
+        </div>
       </form>
     </div>
   );
