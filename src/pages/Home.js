@@ -1,6 +1,6 @@
 import React from "react";
-import EventList from "../components/EventList";
-import EventForm from "../components/EventForm";
+import EventList from "../components/Events/EventsList";
+import EventForm from "../components/Events/EventForm";
 
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
