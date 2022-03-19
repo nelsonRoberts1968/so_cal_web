@@ -1,72 +1,72 @@
-# Getting Started with Create React App
+# SoCal Tanzanian Community
+Built with MERN
 
-##added deve
+![Github License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=for-the-badge)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The SoCal Tanzanian Community is a group of people from Tanzania living in Southern California consciously collaborating on the basis of their belonging to the same country of origin. Collaboration could be through meetings and social events. SoCal Tanzanian community (Entity Number: C4564114) is a registered nonprofit membership organization, based in Southern California. Members are the heartbeat of the SoCal Tanzanian Community. The agreement of the Southern California Tanzanian Community entered by and between the SoCal and its members effective as of February 07-2020. Whereas the members formed the SoCal as a nonprofit Mutual benefit corporation under the laws of California.
 
-## Available Scripts
+This application is built because as a Non-Profit Organization, it is essential that the SoCal Tanzanian Community has a centralized place, such as a website, which gives member access to community resources. Some of the resources include: membership registration, external resource links, and an event calendar.
 
-In the project directory, you can run:
+Technologies Used:
 
-### `npm start`
+- Performant JavaScript
+- NoSQL databases
+- React single-page applications
+- GraphQL APIs
+- Concurrent servers in a MERN app
+- Authentication
+- Github Deployed Application Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Deployed Github Application](src/assets/small/khanhlam-portfolio.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [Links](#links)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To use this application, please follow the following steps:
+- Clone the repository using SSH - <https://github.com/nelsonRoberts1968/so_cal_web.git>
+- npm init to install the listed dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage 
+After the installation, in the command-line, at the root directory, type npm start 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is using the MIT License.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Please feel free to contribute to this project - please find my info at the [Questions](#questions) section and contact me for more infomation.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Please refer to [Usage](#usage) section.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Questions
 
-## Learn More
+Please reach us using our emails and Github profile at:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href = "mailto:khanhlam1990@yahoo.com"> Khanh Lam </a>
+[Khanh's Github Account](https://github.com/khanhlam90)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href = "mailto:wisner.maggiel@gmail.com"> Maggie Finnegan </a>
+[Maggie's Github Account](https://github.com/magfinn)
 
-### Code Splitting
+<a href = "mailto:nellyroberts1968@gmail.com"> Nelson Roberts</a>
+[Nelson's Github Account](https://github.com/nelsonRoberts1968)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a href = "mailto:lauren.a.deguzman@gmail.com"> Lauren de Guzman </a>
+[Lauren's Github Account](https://github.com/Ldeguzman9)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Links:
+* [Heroku deployed application](https://so-cal-community.herokuapp.com/)
+* [Github Repository](https://github.com/nelsonRoberts1968/so_cal_web.git)
