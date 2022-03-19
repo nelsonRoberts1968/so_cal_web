@@ -4,6 +4,18 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '../Typography';
 
+const handleSubmit = e => {
+   e.preventDefault()
+   const page = e.target.src
+   
+   function redirect (req, res) {
+    res.writeHead(301, {
+        Location: `/${page}`
+    }).end();
+    }
+};
+
+
 function Contact() {
     return (
         <Container
@@ -30,6 +42,7 @@ function Contact() {
                 component="button"
                 src="/contact"
                 alt="contact-us-button"
+                onSubmit={handleSubmit}
                 sx={{ width: 120 }}
             > Contact Us </Box>
         </Container>

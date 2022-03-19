@@ -9,6 +9,7 @@ import Events from './components/Events';
 import Login from './components/Login';
 import Membership from './components/Membership';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import theme from './theme'
 import {ThemeProvider} from '@mui/styles'
 
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Route path='/login' element={<Login />} />
       <Route path='/membership' element={<Membership />} />
       <Route path='/events' element={<Events />} />
+      <Route path='/contact' element={<Contact />} />
     </Routes>
     <Footer />
   </Router>

@@ -1,58 +1,72 @@
-import React, { useState } from "react";
+import { React, useState } from 'react';
+import axios from 'axios';
 
+const Contact = () => {
 
-function Contact() {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [alert, setAlert] = useState('');
+  const [inputs, setInputs] = useState({ name: '', email: '', message: '' })
 
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      let res = await fetch('http:localhost:3001/api/contact',
-        {
-          method: 'POST',
-          body: JSON.stringify({
-            fullName: fullName,
-            email: email,
-            message: message
-          })
-        });
-      let resJson = await res.json();
-      if (res.status === 200) {
-        setFullName('');
-        setEmail('');
-        setMessage('');
-        setAlert('Your message has been sent! Someone will be with you shortly.')
-      } else {
-        setAlert('An error occured. Please try again! Make sure that all fields are completed and you are using a valid email address.')
+  const handleChange = e => {
+    const { name, value } = e.target
+    setInputs(prev => ({ ...prev, [name]: value }))
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const { name, email, message } = inputs
+    //post request
+    axios.post('/contact', {
+      name,
+      email,
+      message
+    }).then((response) => {
+      if (response.data.status === 'success') {
+        alert("Message Sent.");
+        this.resetForm()
+      } else if (response.data.status === 'fail') {
+        alert("Message failed to send.")
       }
-    } catch (err) {
-      console.log(err);
-    }
+    })
+
   };
 
   return (
-    <div className="container-border">
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <h1 className="contact-form-title">Contact Form</h1>
-        <label>Full Name:</label>
-        <input type="text" name="name" className="form-control" />
+    <div className="section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="section-title">
+              <h2 className="title">Contact Us</h2>
+              <p>We'd love to hear from you.</p><hr />
+              <form id="contact-form" onSubmit={handleSubmit}
+                method="POST">
+                <div className="form-group">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <input placeholder="Name" id="name" type="text"
+                        className="form-control"
+                        onChange={handleChange} />
+                    </div>
+                    <div className="col-md-6">
+                      <input placeholder="Email" id="email" type="email"
+                        className="form-control" aria-describedby="emailHelp"
+                        onChange=
+                        {handleChange} />
+                    </div>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <textarea placeholder="Message" id="message"
+                    className="form-control" rows="1"
+                    onChange={handleChange} />
+                </div>
+                <button type="submit" className="primary-btn submit">Submit</button>
+              </form>
+            </div>
+          </div>
 
-        <label>Email:</label>
-        <input type="email" name="user_email" className="form-control" />
-        <div>
-          <label>Message:</label>
-          <textarea name="message" rows="4" className="form-control" />
-          <input
-            type="submit"
-            value="Send"
-            className="send-button form-control btn btn-primary"
-          />
-          <div className="success-text row"> {setAlert ? setAlert : null}</div>
         </div>
-      </form>
+
+      </div>
     </div>
   );
 }
