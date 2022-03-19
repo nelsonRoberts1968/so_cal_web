@@ -18,7 +18,7 @@ Technologies Used:
 - Authentication
 - Github Deployed Application Screenshot
 
-![Deployed Github Application](src/assets/small/khanhlam-portfolio.png)
+![Deployed Github Application](src/assets/images/SoCal%20Tanzanian%20Community.png)
 
 ## Table of Contents
 
