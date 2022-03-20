@@ -1,5 +1,9 @@
+import Luxon from 'luxon';
+import { DateTime } from 'luxon'
 
 
+//need to fix isDate formula
+let date = Luxon.DateTime
 
 // (int) The current year
 export const THIS_YEAR = +(new Date().getFullYear());

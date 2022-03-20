@@ -1,10 +1,9 @@
 import React from "react";
-import Slider from '.'
+import Slider from '../../utils/Slider'
 //import coverImage from "../../assets/cover/cover-image.jpg";
 
-function About() {
+function AboutGroup() {
   return (
-    <>
       <section className="my-5 form">
         <h1 id="about">Who we are</h1>
         <hr />
@@ -125,8 +124,7 @@ function About() {
           </ul>
         </div>
       </section>
-    </>
   );
 }
 
-export default About;
+export default AboutGroup;

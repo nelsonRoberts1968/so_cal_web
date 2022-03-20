@@ -1,10 +1,7 @@
-
 import Carousel from "react-elastic-carousel";
 
 export default function Slider() {
   return (
-    <div className="container-slider">
-      <>
         <Carousel className="image-corousel">
           <item className="image-container-l">
             <img
@@ -71,7 +68,5 @@ export default function Slider() {
             <p>Director Of Intertainment</p>
           </item>
         </Carousel>
-      </>
-    </div>
   );
 }

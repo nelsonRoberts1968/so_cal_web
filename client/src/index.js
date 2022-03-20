@@ -3,15 +3,29 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "@fontsource/roboto";
+
+//nav static
 import Navigation from "./components/Nav";
+//hero (changes depending on the page)
+import Hero from './components/Hero'
+//contact us page (/contact)
 import Contact from "./components/Contact";
+//full culture/history page (/culture)
 import Culture from "./components/Culture-History";
+//footer - static
 import Footer from "./components/Footer";
+//events page (/events)
 import Events from "./components/Events";
+//login page (/login)
 import Login from "./pages/Login";
+//signup page (/register)
 import Signup from "./pages/Signup";
+//membership page (/join)
 import Membership from "./components/Membership";
-import Home from "./components/Home";
+//aboutus page (/about)
+import AboutGroup from './components/AboutGroup'
+//landing page (/)
+import Landing from "./pages/Landing";
 import theme from "./theme";
 import { ThemeProvider } from "@mui/styles";
 import {
@@ -71,14 +85,16 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <Router>
         <Navigation />
+        <Hero />
         <Route>
-          <Route path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/membership" component={Membership} />
-          <Route path="/events" component= {Events} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/culture" component={Culture} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path='about' component={AboutGroup} />
+          <Route exact path="/membership" component={Membership} />
+          <Route exact path="/events" component= {Events} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/culture" component={Culture} />
         </Route>
         <Footer />
       </Router>

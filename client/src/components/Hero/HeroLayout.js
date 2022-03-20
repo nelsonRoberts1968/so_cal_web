@@ -1,7 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import HeroBg from './HeroBg';
@@ -12,7 +11,7 @@ const HeroLayoutRoot = styled('section')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
-        height: '60vh',
+        height: '40vh',
         minHeight: 500,
         maxHeight: 1300,
     },
@@ -58,10 +57,6 @@ function HeroLayout(props) {
                 />
                 <HeroBg/>
                 <Background sx={sxBackground}/>
-                <KeyboardArrowDownIcon
-                fontSize='large'
-                    sx={{ position: 'absolute', bottom: 32 }}
-                />
             </Container>
         </HeroLayoutRoot>
     );

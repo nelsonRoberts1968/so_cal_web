@@ -27,14 +27,15 @@ function Contact() {
             <Typography variant="subtitle1" sx={{ my: 3 }}>
                 We are here to help. Get in touch!
             </Typography>
-            <Box
+                <Link to="/contact">
+                    <Box
                 component="button"
                 src="/contact"
                 alt="contact-us-button"
                 sx={{ width: 120 }}
-            > Contact Us 
-            <Link to="/contact"></Link>
+            >Contact Us
             </Box>
+            </Link>
         </Container>
     );
 }

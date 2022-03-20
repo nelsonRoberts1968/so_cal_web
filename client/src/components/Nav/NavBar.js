@@ -19,39 +19,69 @@ function NavBar() {
         <div>
             <AppBar position="fixed">
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    <Box sx={{ flex: 0, display: 'flex', justifyContent: 'flex-end' }} />
-                    {Auth.loggedIn() ? (
+                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
                     <Link
                         variant="h6"
-                        underline='none'
+                        underline="none"
                         href="/"
-                        sx={{ rightLink, color: 'inherit' }}
+                        sx={{ color: 'inherit'}}
                     >
                         {'Home'}
-                        
-                    </Link>):(
+                    </Link>
+                    <Link
+                        variant="h6"
+                        underline="none"
+                        href="/about"
+                        sx={{ ...rightLink, color: 'inherit' }}
+                    >
+                        {'About us'}
+                    </Link>
+                        <Link
+                            variant="h6"
+                            underline="none"
+                            href="/culture"
+                            sx={{ ...rightLink, color: 'inherit' }}
+                        >
+                            {'Culture'}
+                        </Link>
+                        <Link
+                            variant="h6"
+                            underline="none"
+                            href="/membership"
+                            sx={{ ...rightLink, color: 'inherit' }}
+                        >
+                            {'Membership'}
+                        </Link>
+                        <Link
+                            variant="h6"
+                            underline="none"
+                            href="/events"
+                            sx={{ ...rightLink, color: 'inherit' }}
+                        >
+                            {'events'}
+                        </Link>
+                </Box>
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
                         
                         <Link
                             color="#f3a847"
                             variant="h6"
                             underline="none"
-                            href="/login"
-                            sx={{ rightLink }}
+                            href="/signup"
+                            
                         >
-                            {'Signup'}
+                            {'Sign up'}
                         </Link>
-                        
+                        |
                         <Link
+                            color="#f3a847"
                             variant="h6"
                             underline="none"
-                            href="/membership/"
-                            sx={{ ...rightLink, color: 'inherit' }}
+                            href="/login"
                         >
-                            {'Become A Member'}
+                            {'log in'}
                         </Link>
                     </Box>
-                    )}
                 </Toolbar>
             </AppBar>
             <Toolbar />

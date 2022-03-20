@@ -7,7 +7,7 @@ import { useQuery } from "@apollo/client";
 // Add QUERY_ME_BASIC below if needed
 import { QUERY_EVENTS } from "../utils/queries";
 
-const Home = () => {
+const Events = () => {
   //Loading property is going to be used to conditionally render the pages 
   const { loading, data } = useQuery(QUERY_EVENTS);
   //   const { data: userData } = useQuery(QUERY_ME_BASIC);
@@ -35,4 +35,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Events;
