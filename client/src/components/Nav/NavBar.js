@@ -4,6 +4,12 @@ import Link from '@mui/material/Link';
 import AppBar from '../AppBar';
 import Toolbar from '../Toolbar';
 import Auth from '../../utils/auth';
+<<<<<<< HEAD
+=======
+
+//Todo-we may need to use react -dom below link instead of the mui link.
+//import { Link } from 'react-router-dom';
+>>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)
 
 const rightLink = {
     fontSize: 16,
@@ -18,6 +24,7 @@ function NavBar() {
             <AppBar position="fixed">
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
                     <Box sx={{ flex: 0, display: 'flex', justifyContent: 'flex-end' }} />
+                    {Auth.loggedIn() ? (
                     <Link
                         variant="h6"
                         underline='none'
@@ -25,12 +32,15 @@ function NavBar() {
                         sx={{ rightLink, color: 'inherit' }}
                     >
                         {'Home'}
-                    </Link>
+                        
+                    </Link>):(
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+                        
                         <Link
                             color="#f3a847"
                             variant="h6"
                             underline="none"
+<<<<<<< HEAD
                             href="/events/"
                             sx={{ rightLink }}
                         >
@@ -41,10 +51,14 @@ function NavBar() {
                             variant="h6"
                             underline="none"
                             href="/login/"
+=======
+                            href="/login"
+>>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)
                             sx={{ rightLink }}
                         >
-                            {'Sign In'}
+                            {'Signup'}
                         </Link>
+                        
                         <Link
                             variant="h6"
                             underline="none"
@@ -54,7 +68,12 @@ function NavBar() {
                             {'Become A Member'}
                         </Link>
                     </Box>
+<<<<<<< HEAD
             </Toolbar>
+=======
+                    )}
+                </Toolbar>
+>>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)
             </AppBar>
             <Toolbar />
         </div>

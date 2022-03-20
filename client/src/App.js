@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
@@ -22,11 +23,31 @@ import About from './components/About';
 import themes from './theme';
 
 const theme = themes;
+=======
+//Thisused to be the default root folder.That is nor replaced by index.js file
+import React, { useState } from "react";
+import CustomNav from "./components/Nav";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
+import Calendar from "./components/Calendar";
+import Culture from "./components/Culture-History";
+import Membership from "./components/Membership";
+import Footer from "./components/Footer";
+import EventsForm from "./components/EventForm";
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+
+
+import Home from "./components/Home";
+
+import { Container, Card } from "react-bootstrap";
+>>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)
 
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
+<<<<<<< HEAD
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -39,10 +60,15 @@ const authLink = setContext((_, { headers }) => {
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
+=======
+const client = new ApolloClient({
+  link: httpLink,
+>>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)
   cache: new InMemoryCache(),
 });
 
 function App() {
+<<<<<<< HEAD
   return (
     <ThemeProvider theme={theme}>
     <ApolloProvider client={client}>
@@ -69,3 +95,145 @@ function App() {
 }
 
 export default App;
+=======
+
+  // const [isLoggedIn, setIsLoggedIn ] = useState (false);
+  const [homeSelected, setHomeSelected] = useState(true);
+  const [contactSelected, setContactSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(false);
+  const [calendarSelected, setCalendarSelected] = useState(false);
+  const [cultureSelected, setCultureSelected] = useState(false);
+  const [gallerySelected, setGallerySelected] = useState(false);
+  const [membershipSelected, setMembershipSelected] = useState(false);
+
+
+  //conditional rendering logic starts here
+  return (
+    <div>
+      <Container>
+        {/* {isLoggedIn?
+        <CustomNav
+        homeSelected={homeSelected}
+        setHomeSelected={setHomeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        calendarSelected={calendarSelected}
+        setCalendarSelected={setCalendarSelected}
+        cultureSelected={cultureSelected}
+        setCultureSelected={setCultureSelected}
+        gallerySelected={gallerySelected}
+        setGallerySelected={setGallerySelected}
+        membershipSelected={membershipSelected}
+        setMembershipSelected={setMembershipSelected}
+        sticky="top"
+      ></CustomNav> : 
+      
+        <CustomNav
+          homeSelected={homeSelected}
+          setHomeSelected={setHomeSelected}
+          contactSelected={contactSelected}
+          setContactSelected={setContactSelected}
+          aboutSelected={aboutSelected}
+          setAboutSelected={setAboutSelected}
+          cultureSelected={cultureSelected}
+          setCultureSelected={setCultureSelected}
+          membershipSelected={membershipSelected}
+          setMembershipSelected={setMembershipSelected}
+          sticky="top"
+        ></CustomNav>
+} */}
+
+<CustomNav
+        homeSelected={homeSelected}
+        setHomeSelected={setHomeSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        calendarSelected={calendarSelected}
+        setCalendarSelected={setCalendarSelected}
+        cultureSelected={cultureSelected}
+        setCultureSelected={setCultureSelected}
+        gallerySelected={gallerySelected}
+        setGallerySelected={setGallerySelected}
+        membershipSelected={membershipSelected}
+        setMembershipSelected={setMembershipSelected}
+        sticky="top"
+      ></CustomNav>
+      </Container>
+
+      <main>
+        <Container>
+          {homeSelected ? (
+            <>
+              <Home></Home>
+            </>
+          ) : (
+            <></>
+          )}
+          {cultureSelected ? (
+            <>
+              <Culture></Culture>
+            </>
+          ) : (
+            <></>
+          )}
+          {aboutSelected ? (
+            <>
+              <About></About>
+            </>
+          ) : (
+            <></>
+          )}
+          {calendarSelected ? (
+            <div className="events-page">
+              <Card>
+                <Calendar></Calendar>
+              </Card>
+              <Card>
+                <EventsForm />
+              </Card>
+            </div>
+          ) : (
+            <></>
+          )}
+
+          {gallerySelected ? (
+            <>
+              <Gallery></Gallery>
+            </>
+          ) : (
+            <></>
+          )}
+          {membershipSelected ? (
+            <>
+              <Membership></Membership>
+            </>
+          ) : (
+            <></>
+          )}
+          {contactSelected ? (
+            <>
+              <Contact></Contact>
+            </>
+          ) : (
+            <></>
+          )}
+          
+        </Container>
+      </main>
+      <footer>
+        <Container>
+          <Footer></Footer>
+        </Container>
+      </footer>
+    </div>
+  );
+  
+}
+
+
+export default App;
+>>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)

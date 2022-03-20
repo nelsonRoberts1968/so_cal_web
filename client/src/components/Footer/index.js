@@ -5,6 +5,10 @@ import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import Typography from '../Typography';
 import TextField from '../TextField';
+
+//We may have to replace Link import with below import to properly link our pages
+//import { Link } from 'react-router-dom';
+
 import {
   FacebookIcon,
   InstapaperIcon,
@@ -72,6 +76,7 @@ export default function Footer() {
                 </Box>
                 <Box component="a" href="#contact" sx={iconStyle}>
                   <EmailIcon size={36} />
+                  <Link href="/contact/"></Link> 
                 </Box>
               </Grid>
               <Grid item>

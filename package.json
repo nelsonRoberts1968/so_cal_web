@@ -1,21 +1,28 @@
 {
-  "name": "so_cal_community",
-  "version": "0.1.0",
-  "main": "server/server.js",
+  "name": "so_cal",
+  "version": "1.0.0",
+  "description": "Built with MERN",
+  "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "seed": "cd server && npm run seed"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonRoberts1968/so_cal_web.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonRoberts1968/so_cal_web/issues"
+  },
+  "homepage": "https://github.com/nelsonRoberts1968/so_cal_web#readme",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^7.0.0"
   },
   "dependencies": {
-    "mui": "^0.0.1"
+    "jwt-decode": "^3.1.2"
   }
 }

@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import BtnSlider from "./BtnSlider";
-import dataSlider from "./dataSlider";
+
 import Carousel from "react-elastic-carousel";
 
 export default function Slider() {
@@ -29,14 +27,7 @@ export default function Slider() {
             <p>President</p>
            
           </item>
-          {/* <item className="image-container-l">
-            <img
-              alt=""
-              src="https://github.com/nelsonRoberts1968/so_cal_web/blob/develop/src/assets/images/leadershipimages/img4.jpeg?raw=true"
-            />
-            <h3>George Mlanzi</h3>
-            <p>President</p>
-          </item> */}
+    
           <item>
             <img
               alt=""
