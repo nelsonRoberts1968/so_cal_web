@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "./Slider";
 //import coverImage from "../../assets/cover/cover-image.jpg";
 
-function About() {
+function AboutUs() {
   return (
     <>
       <section className="my-5 form">
@@ -135,4 +135,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutUs;

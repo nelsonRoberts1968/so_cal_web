@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import AppBar from './AppBar';
 import Toolbar from '../Toolbar';
+import Auth from '../../utils/auth';
 
 const rightLink = {
     fontSize: 16,
@@ -10,28 +11,37 @@ const rightLink = {
     ml: 3,
 };
 
-function Nav() {
+function NavBar() {
+    const loggedIn = Auth.loggedIn();
     return (
         <div>
             <AppBar position="fixed">
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    <Box sx={{ flex: 1 }} />
+                    <Box sx={{ flex: 0, display: 'flex', justifyContent: 'flex-end' }} />
                     <Link
                         variant="h6"
-                        underline="none"
-                        color="inherit"
+                        underline='none'
                         href="/"
-                        sx={{ fontSize: 24 }}
+                        sx={{ rightLink, color: 'inherit' }}
                     >
-                        {'onepirate'}
+                        {'Home'}
                     </Link>
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
                         <Link
-                            color="inherit"
+                            color="#f3a847"
+                            variant="h6"
+                            underline="none"
+                            href="/events/"
+                            sx={{ rightLink }}
+                        >
+                            {'Events'}
+                        </Link>
+                        <Link
+                            color="#f3a847"
                             variant="h6"
                             underline="none"
                             href="/login/"
-                            sx={rightLink}
+                            sx={{ rightLink }}
                         >
                             {'Sign In'}
                         </Link>
@@ -39,16 +49,16 @@ function Nav() {
                             variant="h6"
                             underline="none"
                             href="/membership/"
-                            sx={{ ...rightLink, color: 'secondary.main' }}
+                            sx={{ ...rightLink, color: 'inherit' }}
                         >
-                            {'Sign Up'}
+                            {'Become A Member'}
                         </Link>
                     </Box>
-                </Toolbar>
+            </Toolbar>
             </AppBar>
             <Toolbar />
         </div>
     );
 }
 
-export default Nav;
+export default NavBar;
