@@ -3,7 +3,8 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
-import Typography from './Typography';
+import Typography from '../Typography';
+import { Link } from 'react-router-dom';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
     position: 'absolute',
@@ -106,9 +107,12 @@ const images = [
 export default function Gallery() {
     return (
         <Container component="section" sx={{ mt: 8, mb: 4 }}>
+            <Link 
+            to='/events'>
             <Typography variant="h4" marked="center" align="center" component="h2">
                 Our Events
             </Typography>
+            </Link>
             <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
                 {images.map((image) => (
                     <ImageIconButton
@@ -143,15 +147,6 @@ export default function Gallery() {
                                 color: 'common.white',
                             }}
                         >
-                            {/* <Typography
-                                component="h3"
-                                variant="h6"
-                                color="inherit"
-                                className="imageTitle"
-                            >
-                                // {image.title}
-                                <div className="imageMarked" /> */}
-                            {/* </Typography> */}
                         </Box>
                     </ImageIconButton>
                 ))}

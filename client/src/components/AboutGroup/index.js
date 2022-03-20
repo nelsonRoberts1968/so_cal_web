@@ -1,10 +1,9 @@
 import React from "react";
-import Slider from '.'
+import Slider from '../../utils/Slider'
 //import coverImage from "../../assets/cover/cover-image.jpg";
 
-function AboutUs() {
+function AboutGroup() {
   return (
-    <>
       <section className="my-5 form">
         <h1 id="about">Who we are</h1>
         <hr />
@@ -125,8 +124,11 @@ function AboutUs() {
           </ul>
         </div>
       </section>
-    </>
   );
 }
 
+<<<<<<< HEAD
 export default AboutUs;
+=======
+export default AboutGroup;
+>>>>>>> 6a5311d (fixed links on nav and in routes)
