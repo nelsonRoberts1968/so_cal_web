@@ -15,11 +15,11 @@ const styles = (theme) => ({
     root: {
         padding: 0,
         'label + &': {
-            marginTop: theme.spacing(3),
+            marginTop: 3,
         },
     },
     input: {
-        minWidth: theme.spacing(6),
+        minWidth: 6,
         backgroundColor: theme.palette.common.white,
         '&$disabled': {
             backgroundColor: theme.palette.divider,
@@ -34,13 +34,13 @@ const styles = (theme) => ({
     disabled: {},
     [inputStyleMapping.small]: {
         fontSize: 14,
-        padding: theme.spacing(1),
-        width: `calc(100% - ${theme.spacing(2)})`,
+        padding: 1,
+        width: `calc(100% - 2)`,
     },
     [inputStyleMapping.medium]: {
         fontSize: 16,
-        padding: theme.spacing(2),
-        width: `calc(100% - ${theme.spacing(4)})`,
+        padding: (2),
+        width: `calc(100% - 4)`,
     },
     [inputStyleMapping.large]: {
         fontSize: 18,

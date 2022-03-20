@@ -52,13 +52,12 @@ export default function Footer() {
       sx={{ display: 'flex', bgcolor: 'secondary' }}
     >
       <Container sx={{ my: 8, display: 'flex' }}>
-        <Grid container spacing={5}>
+        <Grid container>
           <Grid item xs={6} sm={4} md={3}>
             <Grid
               container
               direction="column"
               justifyContent="flex-end"
-              spacing={2}
               sx={{ height: 120 }}
             >
               <Grid item sx={{ display: 'flex' }}>

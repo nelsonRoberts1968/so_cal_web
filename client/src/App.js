@@ -9,6 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { ThemeProvider } from '@material-ui/core/styles'
 
+
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -18,6 +19,7 @@ import Membership from './pages/Membership';
 import ContactUs from './pages/ContactUs';
 import Culture from './pages/Culture'
 import About from './components/About';
+import theme from './theme';
 
 
 const httpLink = createHttpLink({
@@ -41,7 +43,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">

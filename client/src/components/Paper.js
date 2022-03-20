@@ -1,14 +1,16 @@
-import * as React from 'react';
+import { React } from 'react';
 import PropTypes from 'prop-types';
 import MuiPaper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
+import { styled, ThemeProvider } from '@mui/material/styles';
+
+const theme = require('../theme');
 
 const PaperRoot = styled(MuiPaper, {
     shouldForwardProp: (prop) => prop !== 'background' && prop !== 'padding',
 })(({ theme, background, padding }) => ({
     backgroundColor: theme.palette.secondary[background],
     ...(padding && {
-        padding: theme.spacing(1),
+        padding: 1,
     }),
 }));
 
