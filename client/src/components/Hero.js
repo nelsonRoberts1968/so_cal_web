@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Button from '../Button';
-import Typography from '../Typography';
+import Button from './Button';
+import Typography from './Typography';
 import HeroLayout from './HeroLayout';
-const heroBg = require('../../assets/images/bg_timelapse.mp4')
+const heroBg = require('../assets/images/bg_timelapse.mp4')
 
 export default function Hero() {
     return (
@@ -13,11 +13,11 @@ export default function Hero() {
             }}
         >
             {/* Increase the network loading priority of the background image. */}
-            <img
+            {/* <img
                 style={{ display: 'none' }}
                 src='./assets/backgrounf.jpg'
                 alt="increase priority"
-            />
+            /> */}
             <Typography color="inherit" align="center" variant="h2" marked="center">
                 SoCal Tanzanian Community
             </Typography>

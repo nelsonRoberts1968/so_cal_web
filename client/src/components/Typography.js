@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@mui/styles';
 import MuiTypography from '@mui/material/Typography';
 
-const theme = require('../theme')
-
 const markStyleMapping = {
     center: {
         h1: '',
@@ -37,28 +35,28 @@ const styles = (theme) => ({
         height: 4,
         width: 73,
         display: 'block',
-        margin: `auto 0`,
+        margin: `${theme.spacing(1)} auto 0`,
         backgroundColor: theme.palette.secondary.main,
     },
     [markStyleMapping.center.h3]: {
         height: 4,
         width: 55,
         display: 'block',
-        margin: `auto 0`,
+        margin: `${theme.spacing(1)} auto 0`,
         backgroundColor: theme.palette.secondary.main,
     },
     [markStyleMapping.center.h4]: {
         height: 4,
         width: 55,
         display: 'block',
-        margin: `auto 0`,
+        margin: `${theme.spacing(1)} auto 0`,
         backgroundColor: theme.palette.secondary.main,
     },
     [markStyleMapping.left.h6]: {
         height: 2,
         width: 28,
         display: 'block',
-        marginTop: (0.5),
+        marginTop: theme.spacing(0.5),
         background: 'currentColor',
     },
 });

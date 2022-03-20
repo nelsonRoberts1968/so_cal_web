@@ -19,8 +19,9 @@ import Membership from './pages/Membership';
 import ContactUs from './pages/ContactUs';
 import Culture from './pages/Culture'
 import About from './components/About';
-import theme from './theme';
+import themes from './theme';
 
+const theme = themes;
 
 const httpLink = createHttpLink({
   uri: '/graphql',

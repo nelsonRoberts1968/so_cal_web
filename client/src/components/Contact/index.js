@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Typography from '../Typography';
+import Typography from "../Typography";
 
 function Contact() {
     return (
@@ -28,7 +28,7 @@ function Contact() {
             </Typography>
             <Box
                 component="button"
-                src="/contact"
+                href="/contact"
                 alt="contact-us-button"
                 sx={{ width: 120 }}
             > Contact Us </Box>

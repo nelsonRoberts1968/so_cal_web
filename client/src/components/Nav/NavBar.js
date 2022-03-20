@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import AppBar from './AppBar';
+import AppBar from '../AppBar';
 import Toolbar from '../Toolbar';
 import Auth from '../../utils/auth';
 

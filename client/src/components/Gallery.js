@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
-import Typography from '../Typography';
+import Typography from './Typography';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
     position: 'absolute',
@@ -12,7 +12,7 @@ const ImageBackdrop = styled('div')(({ theme }) => ({
     top: 0,
     bottom: 0,
     background: '#000',
-    opacity: 0.1,
+    opacity: 0.5,
     transition: theme.transitions.create('opacity'),
 }));
 
@@ -23,7 +23,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
     borderRadius: 0,
     height: '40vh',
     [theme.breakpoints.down('md')]: {
-        width: '90% !important',
+        width: '100% !important',
         height: 100,
     },
     '&:hover': {
@@ -55,52 +55,52 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 
 const images = [
     {
-          title:"group-lunch",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event.jpeg?raw=true",
-          width: "40%",
-        },
-        {
-          title:"tanzanian",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event10.jpeg?raw=true",
-          width: "20%",
-        },
-        {
-          title:"group-meeting",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event1.jpeg?raw=true",
-          width: "40%",
-        },
-        {
-          title:"women-lunch",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event5.jpeg?raw=true",
-          width: "38%",
-        },
-        {
-          title:"party",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event6.jpeg?raw=true",
-          width: "38%",
-        },
-        {
-          title:"group-drinks",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event7.jpeg?raw=true",
-          width: "24%",
-        },
+        title: "group-lunch",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event.jpeg?raw=true",
+        width: "40%",
+    },
+    {
+        title: "tanzanian",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event10.jpeg?raw=true",
+        width: "20%",
+    },
+    {
+        title: "group-meeting",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event1.jpeg?raw=true",
+        width: "40%",
+    },
+    {
+        title: "women-lunch",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event5.jpeg?raw=true",
+        width: "38%",
+    },
+    {
+        title: "party",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event6.jpeg?raw=true",
+        width: "38%",
+    },
+    {
+        title: "group-drinks",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event7.jpeg?raw=true",
+        width: "24%",
+    },
 
-        {
-          title:"women-dresses",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event8.jpeg?raw=true",
-          width: "40%",
-        },
-        {
-          title:"tanzanian-women",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/WomenOfGroup2.jpeg?raw=true",
-          width: "20%",
-        },
-        {
-          title:"women",
-          url:"https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event9.jpeg?raw=true",
-          width: "40%",
-        }
-    ];
+    {
+        title: "women-dresses",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event8.jpeg?raw=true",
+        width: "40%",
+    },
+    {
+        title: "tanzanian-women",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/WomenOfGroup2.jpeg?raw=true",
+        width: "20%",
+    },
+    {
+        title: "women",
+        url: "https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/Event9.jpeg?raw=true",
+        width: "40%",
+    }
+];
 
 
 export default function Gallery() {
@@ -149,9 +149,9 @@ export default function Gallery() {
                                 color="inherit"
                                 className="imageTitle"
                             >
-                                {image.title}
-                                <div className="imageMarked" />
-                            </Typography> */}
+                                // {image.title}
+                                <div className="imageMarked" /> */}
+                            {/* </Typography> */}
                         </Box>
                     </ImageIconButton>
                 ))}

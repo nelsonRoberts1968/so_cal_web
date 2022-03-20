@@ -1,5 +1,5 @@
 import * as React from 'react';
-const bg_timelapse = require('../../assets/images/bg_timelapse.mp4');
+const bg_timelapse = require('../assets/images/bg_timelapse.mp4');
 
 function HeroBg() {
     return(

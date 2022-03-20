@@ -49,7 +49,7 @@ export default function Footer() {
   return (
     <Typography
       component="footer"
-      sx={{ display: 'flex', bgcolor: 'secondary' }}
+      sx={{ display: 'flex', bgcolor: 'secondary.light' }}
     >
       <Container sx={{ my: 8, display: 'flex' }}>
         <Grid container>

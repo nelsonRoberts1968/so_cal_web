@@ -56,10 +56,10 @@ function HeroLayout(props) {
                         zIndex: -1,
                     }}
                 />
-                <HeroBg/>
-                <Background sx={sxBackground}/>
+                <HeroBg />
+                <Background sx={sxBackground} />
                 <KeyboardArrowDownIcon
-                fontSize='large'
+                    fontSize='large'
                     sx={{ position: 'absolute', bottom: 32 }}
                 />
             </Container>
