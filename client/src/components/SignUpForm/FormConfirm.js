@@ -1,27 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import Button from '@mui/material/Button'
 import { List, ListItem, ListItemText } from '@mui/material';
 import Toolbar from '../Toolbar'
 import LayoutHome from '../Hero/LayoutHome'
 import FormButton from '../FormButton';
-// import { useMutation } from "@apollo/client";
-// import { ADD_USER } from "../utils/mutations";
-// import Auth from '../utils/auth';
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from '../../utils/auth';
 
 export class FormConfirm extends Component {
 
-    // const[addUser, { error }] = useMutation(ADD_USER);
+    
 
-    continue = e => {
-        // e.preventDefault();
-        // try {
-        //     const { data } = await addUser({
-        //         variables: { ...formState }
-        //     });
-        //     Auth.login(data.addUser.token);
-        // } catch (e) {
-        //     console.error(e);
-        // }
+    continue = async (e) => {
+        const { values: { firstName, lastName, email, phone, username, password } } = this.props;
+
+        const [formState, setFormState] = useState({
+            firstName: {firstName}, lastName: {lastName}, email: {email}, username: {username}, password: {password}
+        })
+        
+        e.preventDefault();
+        const[addUser, { error }] = useMutation(ADD_USER);
+        try {
+            const { data } = await addUser({
+                variables: { ...formState }
+            });
+            Auth.login(data.addUser.token);
+        } catch (e) {
+            console.error(e);
+        }
         this.props.nextStep();
     };
 
@@ -31,7 +38,6 @@ export class FormConfirm extends Component {
     };
 
     render() {
-        const { values: { firstName, lastName, email, phone, username, password } } = this.props;
         return (
             <React.Fragment>
                 <LayoutHome>
@@ -42,37 +48,37 @@ export class FormConfirm extends Component {
                             <ListItem>
                                 <ListItemText
                                     primary='First Name'
-                                    secondary={firstName}
+                                    
                                 />
                             </ListItem>
                             <ListItem>
                                 <ListItemText
                                     primary='Last Name'
-                                    secondary={lastName}
+                                    
                                 />
                             </ListItem>
                             <ListItem>
                                 <ListItemText
                                     primary='Email'
-                                    secondary={email}
+                                    
                                 />
                             </ListItem>
                             <ListItem>
                                 <ListItemText
                                     primary='Phone'
-                                    secondary={phone}
+                                    
                                 />
                             </ListItem>
                             <ListItem>
                                 <ListItemText
                                     primary='Username'
-                                    secondary={username}
+                                    
                                 />
                             </ListItem>
                             <ListItem>
                                 <ListItemText
                                     primary='Password'
-                                    secondary={password}
+                                    
                                 />
                             </ListItem>
                         </List>
