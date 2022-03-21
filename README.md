@@ -1,6 +1,7 @@
 # SoCal Tanzanian Community
 Built with MERN
 
+
 ![Github License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=for-the-badge)
 
 ## Description
