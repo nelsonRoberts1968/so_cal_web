@@ -34,7 +34,7 @@ function NavBar() {
                         href="/about"
                         sx={{ ...rightLink, color: 'inherit' }}
                     >
-                        {'About us'}
+                        {'About'}
                     </Link>
                         <Link
                             variant="h6"

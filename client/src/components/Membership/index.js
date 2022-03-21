@@ -1,15 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import StripeContainer from "./StripeContainer";
+import Toolbar from '../Toolbar'
+import LayoutHome from '../Hero/LayoutHome'
 
 const Membership = () => {
   const [showItem, setShowItem] = useState(false);
   return (
-    
-    <div className="PaymentContainer form">
-      <h1 className="PaymentFormHeader">SoCal Tanzania Community Membership</h1>
-    
-        <p>
+
+    <LayoutHome>
+      <Toolbar>
+        <h1 className="PaymentFormHeader">SoCal Tanzania Community Membership</h1>
+      </Toolbar>
+
+      <p>
         More information about memberships here. </p>
 
       {showItem ? (
@@ -20,7 +24,7 @@ const Membership = () => {
           <button onClick={() => setShowItem(true)}>Purchase Membership</button>
         </>
       )}
-    </div>
+    </LayoutHome>
   );
 };
 

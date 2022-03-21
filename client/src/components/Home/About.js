@@ -37,17 +37,18 @@ function About(props) {
                                 living in Southern California consciously collaborating on the basis
                                 of their belonging to the same country of origin.
                             </p>
-                                <Link to="/culture">
+                            <Link to='/about'>
                                 <Button
-                                color="secondary"
-                                size="large"
-                                variant="contained"
-                                component="a"
-                                href="/culture"
-                                sx={{ mt: 8 }}
-                            > Learn More
-                            </Button>
-                        </Link>
+                                    color="secondary"
+                                    variant="contained"
+                                    size="large"
+                                    component="a"
+                                    sx={{ minWidth: 200 }}
+
+                                >
+                                    Learn More
+                                </Button>
+                            </Link>
                         </Box>
 
                     </Paper>
