@@ -4,14 +4,11 @@ import { List, ListItem, ListItemText } from '@mui/material';
 import Toolbar from '../Toolbar'
 import LayoutHome from '../Hero/LayoutHome'
 import FormButton from '../FormButton';
-// import { useMutation } from "@apollo/client";
-// import { ADD_USER } from "../utils/mutations";
-// import Auth from '../utils/auth';
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import Auth from '../utils/auth';
 
 export class FormConfirm extends Component {
-
-    // const[addUser, { error }] = useMutation(ADD_USER);
-
     continue = e => {
         // e.preventDefault();
         // try {

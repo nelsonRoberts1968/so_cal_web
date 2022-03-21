@@ -80,14 +80,16 @@ function Contact() {
             type="submit"
             value="Send"
             className="send-button form-control btn btn-primary"
-          > Submit </FormButton>
+          > Submit 
+          
+          </FormButton>
 
         <FormFeedback 
         />
           
       </form>
       </LayoutHome>
-      </>
+      </>  
   );
 }
 
