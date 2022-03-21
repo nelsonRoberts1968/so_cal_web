@@ -1,7 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+<<<<<<< HEAD
 import AppBar from './AppBar';
+=======
+import AppBar from '../AppBar';
+>>>>>>> develop
 import Toolbar from '../Toolbar';
 import Auth from '../../utils/auth';
 
@@ -15,6 +19,10 @@ const rightLink = {
 };
 
 function NavBar() {
+<<<<<<< HEAD
+=======
+    const loggedIn = Auth.loggedIn();
+>>>>>>> develop
     return (
         <div>
             <AppBar position="fixed">
@@ -34,7 +42,11 @@ function NavBar() {
                         href="/about"
                         sx={{ ...rightLink, color: 'inherit' }}
                     >
+<<<<<<< HEAD
                         {'About'}
+=======
+                        {'About us'}
+>>>>>>> develop
                     </Link>
                         <Link
                             variant="h6"
@@ -67,8 +79,24 @@ function NavBar() {
                             color="#f3a847"
                             variant="h6"
                             underline="none"
+<<<<<<< HEAD
                             href="/register"
                             
+=======
+                            href="/events/"
+                            sx={{ rightLink }}
+                        >
+                            {'Events'}
+                        </Link>
+                        <Link
+                            color="#f3a847"
+                            variant="h6"
+                            underline="none"
+                            href="/login/"
+                            href="/login"
+                            sx={{ rightLink }}
+                            href="/signup"
+>>>>>>> develop
                         >
                             {'Sign up'}
                         </Link>
@@ -82,7 +110,11 @@ function NavBar() {
                             {'log in'}
                         </Link>
                     </Box>
+<<<<<<< HEAD
                 </Toolbar>
+=======
+            </Toolbar>
+>>>>>>> develop
             </AppBar>
             <Toolbar />
         </div>

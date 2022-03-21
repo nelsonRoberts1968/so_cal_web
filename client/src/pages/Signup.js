@@ -7,8 +7,6 @@ import Auth from '../utils/auth';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    firstName: "",
-    lastName: "",
     username: "",
     email: "",
     password: "",
@@ -38,7 +36,6 @@ const Signup = () => {
       console.error(e);
     }
   };
-
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-md-6">
@@ -46,24 +43,6 @@ const Signup = () => {
           <h4 className="card-header">Sign Up</h4>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>
-              <input
-                className="form-input"
-                placeholder="Your First Name"
-                name="firstName"
-                type="firstName"
-                id="firstName"
-                value={formState.firstName}
-                onChange={handleChange}
-              />
-              <input
-                className="form-input"
-                placeholder="Your Last Name"
-                name="lastName"
-                type="lastName"
-                id="lastName"
-                value={formState.lastName}
-                onChange={handleChange}
-              />
               <input
                 className="form-input"
                 placeholder="Your username"

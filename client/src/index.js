@@ -9,7 +9,11 @@ import Navigation from "./components/Nav";
 //hero (changes depending on the page)
 import Hero from './components/Hero'
 //contact us page (/contact)
+<<<<<<< HEAD
 import Contact from "./pages/ContactUs";
+=======
+import Contact from "./components/Contact";
+>>>>>>> develop
 //full culture/history page (/culture)
 import Culture from "./components/Culture-History";
 //footer - static
@@ -19,7 +23,11 @@ import Events from "./components/Events";
 //login page (/login)
 import Login from "./pages/Login";
 //signup page (/register)
+<<<<<<< HEAD
 import Register from "./pages/Register";
+=======
+import Signup from "./pages/Signup";
+>>>>>>> develop
 //membership page (/join)
 import Membership from "./components/Membership";
 //aboutus page (/about)
@@ -89,10 +97,17 @@ ReactDOM.render(
         <Route>
           <Route exact path="/" component={Landing} />
           <Route exact path="/login" component={Login} />
+<<<<<<< HEAD
           <Route exact path="/register" component={Register} />
           <Route exact path='/about' component={AboutGroup} />
           <Route exact path="/membership" component={Membership} />
           <Route exact path="/events" component={Events} />
+=======
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path='/about' component={AboutGroup} />
+          <Route exact path="/membership" component={Membership} />
+          <Route exact path="/events" component= {Events} />
+>>>>>>> develop
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/culture" component={Culture} />
         </Route>

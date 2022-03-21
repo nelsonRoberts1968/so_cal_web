@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Container from '@mui/material/Container';
 import AboutGroup from '../../../src/components/AboutGroup';
 import Box from '@mui/material/Box';
@@ -37,6 +36,7 @@ function About(props) {
                                 living in Southern California consciously collaborating on the basis
                                 of their belonging to the same country of origin.
                             </p>
+<<<<<<< HEAD
                             <Link to='/about'>
                                 <Button
                                     color="secondary"
@@ -49,6 +49,19 @@ function About(props) {
                                     Learn More
                                 </Button>
                             </Link>
+=======
+                                <Link to="/culture">
+                                <Button
+                                color="secondary"
+                                size="large"
+                                variant="contained"
+                                component="a"
+                                href="/culture"
+                                sx={{ mt: 8 }}
+                            > Learn More
+                            </Button>
+                        </Link>
+>>>>>>> develop
                         </Box>
 
                     </Paper>

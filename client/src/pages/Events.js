@@ -36,3 +36,7 @@ const Events = () => {
 };
 
 export default Events;
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
