@@ -127,8 +127,4 @@ function AboutGroup() {
   );
 }
 
-<<<<<<< HEAD
-export default AboutUs;
-=======
 export default AboutGroup;
->>>>>>> 6a5311d (fixed links on nav and in routes)

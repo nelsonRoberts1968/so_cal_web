@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
-<<<<<<< HEAD
-import Auth from "../utils/auth";
-=======
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 
->>>>>>> 85264aa (changed file structure, added login and signup logic, separated client and server files,added dev invironment to root folder)
 
 const Signup = () => {
   const [formState, setFormState] = useState({

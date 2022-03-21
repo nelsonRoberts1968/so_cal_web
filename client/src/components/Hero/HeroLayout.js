@@ -55,17 +55,8 @@ function HeroLayout(props) {
                         zIndex: -1,
                     }}
                 />
-<<<<<<< HEAD:client/src/components/Nav/HeroLayout.js
-                <HeroBg />
-                <Background sx={sxBackground} />
-                <KeyboardArrowDownIcon
-                    fontSize='large'
-                    sx={{ position: 'absolute', bottom: 32 }}
-                />
-=======
                 <HeroBg/>
                 <Background sx={sxBackground}/>
->>>>>>> 6a5311d (fixed links on nav and in routes):client/src/components/Hero/HeroLayout.js
             </Container>
         </HeroLayoutRoot>
     );
