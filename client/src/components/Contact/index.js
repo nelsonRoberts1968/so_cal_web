@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-
+import FormButton from '../FormButton';
+import RFTextField from '../RFTextField';
+import TextField from '../TextField';
+import FormFeedback from '../FormFeedback'
+import MenuItem from "@mui/material/MenuItem"
+import Toolbar from '../Toolbar'
+import AppBar from '../Nav/AppBar'
+import LayoutHome from '../Hero/LayoutHome'
+import Box from '@mui/material/Box';
+import Form from '@mui/material/FormGroup'
 
 function Contact() {
   const [fullName, setFullName] = useState('');
@@ -34,26 +43,56 @@ function Contact() {
   };
 
   return (
-    <div className="container-border">
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <h1 className="contact-form-title">Contact Form</h1>
-        <label>Full Name:</label>
-        <input type="text" name="name" className="form-control" />
+    <>
+<LayoutHome>
+    <Toolbar>
+      <h1>Contact Us</h1>
+        </Toolbar>
+      
+      <form
+      onSubmit={handleSubmit}
+      style= {{width: '70%'}}
+      >
+     
+        <TextField
+        style={{ width: "95%", margin: "5px" }}
+        type="text"
+        size='xlarge'
+        isRequired = 'true'
+        form label='Full Name'
+         />
 
-        <label>Email:</label>
-        <input type="email" name="user_email" className="form-control" />
-        <div>
-          <label>Message:</label>
-          <textarea name="message" rows="4" className="form-control" />
-          <input
+        <TextField
+            style={{ width: "95%", margin: "5px" }}
+            type="text" 
+        size='xlarge'
+        isRequired='true'
+        form label='Email'
+        name="user_email"
+        />
+  
+        <TextField
+        style={{ width: "95%", margin: "5px" }}
+        type="text"
+        size='xlarge'
+        isRequired='true'
+        textarea name="message" 
+        form label='Message'
+        multiline rows={8}/>
+
+        <FormButton
+            style={{ height: '6vh', width: "50px"}}
             type="submit"
             value="Send"
             className="send-button form-control btn btn-primary"
-          />
-          <div className="success-text row"> {setAlert ? setAlert : null}</div>
-        </div>
+          > Submit </FormButton>
+
+        <FormFeedback 
+        />
+          
       </form>
-    </div>
+      </LayoutHome>
+      </>
   );
 }
 

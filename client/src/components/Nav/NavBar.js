@@ -67,7 +67,7 @@ function NavBar() {
                             color="#f3a847"
                             variant="h6"
                             underline="none"
-                            href="/signup"
+                            href="/register"
                             
                         >
                             {'Sign up'}

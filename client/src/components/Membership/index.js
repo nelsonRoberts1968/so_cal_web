@@ -5,8 +5,13 @@ import StripeContainer from "./StripeContainer";
 const Membership = () => {
   const [showItem, setShowItem] = useState(false);
   return (
+    
     <div className="PaymentContainer form">
       <h1 className="PaymentFormHeader">SoCal Tanzania Community Membership</h1>
+    
+        <p>
+        More information about memberships here. </p>
+
       {showItem ? (
         <StripeContainer />
       ) : (
