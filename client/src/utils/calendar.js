@@ -1,9 +1,9 @@
 import Luxon from 'luxon';
-import { DateTime } from 'luxon'
+import { DATE_FULL } from 'luxon'
 
 
 //need to fix isDate formula
-let date = Luxon.DateTime
+let date = Luxon.DATE_FULL
 
 // (int) The current year
 export const THIS_YEAR = +(new Date().getFullYear());
@@ -61,7 +61,7 @@ export const getMonthFirstDay = (month = THIS_MONTH, year = THIS_YEAR) => {
 }
 
 // (bool) Checks if a value is a date - this is just a simple check
-export const isDate = date =& gt; {
+export const isDate = (date) => {
     const isDate = Object.prototype.toString.call(date) === '[object Date]';
     const isValidDate = date && !Number.isNaN(date.valueOf());
 

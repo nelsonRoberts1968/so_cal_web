@@ -16,12 +16,15 @@ export const QUERY_EVENT = gql`
   query event($id: ID!) {
     event(_id: $id) {
       _id
-      eventText
-      createdAt
-      username
+      title
+      description
+      contact
+      contactInfo
+      location
+      date
+      link
       }
     }
-  }
 `;
 
 export const QUERY_USER = gql`

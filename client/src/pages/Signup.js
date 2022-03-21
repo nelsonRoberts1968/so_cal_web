@@ -92,8 +92,9 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <button className="btn d-block w-100" type="submit">
-              <Link to="/home"></Link>
+              <Link to="/login">
               Submit
+                </Link>
               </button>
             </form>
             {error && <div>Signup failed</div>}

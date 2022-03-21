@@ -3,11 +3,7 @@ import FormSignUp from './FormSignUp'
 import FormPersonalDetails from './FormPersonalDetails';
 import FormConfirm from './FormConfirm';
 import Success from './Success'
-import { List, ListItem, ListItemText } from '@mui/material';
-import TextField from '../TextField';
-import FormButton from '../FormButton';
-import Toolbar from '../Toolbar'
-import LayoutHome from '../Hero/LayoutHome'
+
 
 export class SignUpForm extends Component {
     state = {
