@@ -22,9 +22,9 @@ function NavBar() {
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
                     <Link
                         variant="h6"
+                        color= '#f3a847'
                         underline="none"
                         href="/"
-                        sx={{ color: 'inherit'}}
                     >
                         {'Home'}
                     </Link>

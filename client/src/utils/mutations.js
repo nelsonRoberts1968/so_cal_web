@@ -25,16 +25,16 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_EVENT = gql`
-  mutation addEvent($eventText: String!) {
-    addEvent(eventtText: $eventText) {
+  mutation addEvent($title: String!, $description: String!, $contact: String!, $contactInfo: String!, $date: String!, $location: String!, $url: String! ) {
+    addEvent(title: $title, description: $description, contact: $contact, contactInfo: $contactInfo, date: $date, location: $location, url: $url) {
       _id
-      eventText
-      createdAt
-      username
-      commentCount
-      comments {
-        _id
-      }
+      title
+      description
+      contact
+      contactInfo
+      date
+      location
+      url
     }
   }
 `;

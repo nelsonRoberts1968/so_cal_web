@@ -2,10 +2,8 @@ import * as React from 'react';
 import Button from '../Button';
 import Typography from '../Typography';
 import LayoutHome from './LayoutHome';
-import HeroBg from './HeroBg';
 import { Link } from 'react-router-dom';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-// const heroBg = require('../../assets/images/bg_timelapse.mp4')
 
 export default function Hero() {
     return (

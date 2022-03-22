@@ -32,7 +32,6 @@ function EventsForm() {
           link: link,
         }),
       });
-      let resJson = await res.json();
       if (res.status === 200) {
         setTitle("");
         setDescription("");

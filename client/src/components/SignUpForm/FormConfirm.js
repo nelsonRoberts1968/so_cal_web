@@ -10,15 +10,6 @@ import Auth from '../utils/auth';
 
 export class FormConfirm extends Component {
     continue = e => {
-        // e.preventDefault();
-        // try {
-        //     const { data } = await addUser({
-        //         variables: { ...formState }
-        //     });
-        //     Auth.login(data.addUser.token);
-        // } catch (e) {
-        //     console.error(e);
-        // }
         this.props.nextStep();
     };
 

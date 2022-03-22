@@ -6,7 +6,7 @@ export default function PageHero() {
     return (
         <HeroLayout
             sxBackground={{
-                backgroundColor: '#7fc7d9', // Average color of the background image.
+                backgroundColor: '#7fc7d9',
                 backgroundPosition: 'center',
             }}
         >

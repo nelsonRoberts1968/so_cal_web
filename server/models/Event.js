@@ -1,37 +1,42 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const commentSchema = require('./Comment')
-const dateFormat = require('../utils/dateFormat');
+// const commentSchema = require('./Comment')
+// const dateFormat = require('../utils/dateFormat');
 
 const eventSchema = new Schema(
   {
-    username: {
+    title: {
       type: String,
       required: true
     },
-    eventName: {
+    description: {
       type: String,
-      required: 'You need to have an event name!',
       trim: true
     },
-    eventText: {
-      type: String,
-      required: 'You need to leave the event details!',
-      minlength: 1,
-      maxlength: 350
+    contact: {
+      type: String
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: timestamp => dateFormat(timestamp)
+    contactInfo: {
+      type: String
+    }, 
+    location: {
+      type: String
     },
-    comments: [commentSchema]
+    date: {
+      type: String
+    },
+    url: {
+      type: String
+    },
+    username: {
+      type: String
+    }
   }
 );
 
-eventSchema.virtual('commentCount').get(function() {
-  return this.comments.length;
-});
+// eventSchema.virtual('commentCount').get(function() {
+//   return this.comments.length;
+// });
 
 const Event = mongoose.model('Event', eventSchema);
 

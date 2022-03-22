@@ -9,7 +9,6 @@ function Contact() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [alert, setAlert] = useState('');
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,9 +27,8 @@ function Contact() {
         setFullName('');
         setEmail('');
         setMessage('');
-        setAlert('Your message has been sent! Someone will be with you shortly.')
       } else {
-        setAlert('An error occured. Please try again! Make sure that all fields are completed and you are using a valid email address.')
+        window.alert('An error occured. Please try again! Make sure that all fields are completed and you are using a valid email address.')
       }
     } catch (err) {
       console.log(err);
@@ -39,57 +37,57 @@ function Contact() {
 
   return (
     <>
-<LayoutHome>
-    <Toolbar>
-      <h1>Contact Us</h1>
+      <LayoutHome>
+        <Toolbar>
+          <h1>Contact Us</h1>
         </Toolbar>
-      
-      <form
-      onSubmit={handleSubmit}
-      style= {{width: '70%'}}
-      >
-     
-        <TextField
-        style={{ width: "95%", margin: "5px" }}
-        type="text"
-        size='xlarge'
-        isRequired = 'true'
-        form label='Full Name'
-         />
 
-        <TextField
+        <form
+          onSubmit={handleSubmit}
+          style={{ width: '70%' }}
+        >
+
+          <TextField
             style={{ width: "95%", margin: "5px" }}
-            type="text" 
-        size='xlarge'
-        isRequired='true'
-        form label='Email'
-        name="user_email"
-        />
-  
-        <TextField
-        style={{ width: "95%", margin: "5px" }}
-        type="text"
-        size='xlarge'
-        isRequired='true'
-        textarea name="message" 
-        form label='Message'
-        multiline rows={8}/>
+            type="text"
+            size='xlarge'
+            isRequired='true'
+            form label='Full Name'
+          />
 
-        <FormButton
-            style={{ height: '6vh', width: "50px"}}
+          <TextField
+            style={{ width: "95%", margin: "5px" }}
+            type="text"
+            size='xlarge'
+            isRequired='true'
+            form label='Email'
+            name="user_email"
+          />
+
+          <TextField
+            style={{ width: "95%", margin: "5px" }}
+            type="text"
+            size='xlarge'
+            isRequired='true'
+            textarea name="message"
+            form label='Message'
+            multiline rows={8} />
+
+          <FormButton
+            style={{ height: '6vh', width: "50px" }}
             type="submit"
             value="Send"
             className="send-button form-control btn btn-primary"
-          > Submit 
-          
+          > Submit
+
           </FormButton>
 
-        <FormFeedback 
-        />
-          
-      </form>
+          <FormFeedback
+          />
+
+        </form>
       </LayoutHome>
-      </>  
+    </>
   );
 }
 

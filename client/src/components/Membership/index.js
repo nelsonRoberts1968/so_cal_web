@@ -14,7 +14,7 @@ const Membership = () => {
       </Toolbar>
 
       <p>
-        More information about memberships here. </p>
+        Memberships require a one-time $50 registration fee. This fee is used to renew non-profit licensing. If you have questions, please get in touch!</p>
 
       {showItem ? (
         <StripeContainer />

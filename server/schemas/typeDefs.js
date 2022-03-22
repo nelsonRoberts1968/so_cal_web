@@ -15,12 +15,15 @@ const typeDefs = gql`
 
   type Event {
     _id: ID
-    eventName: String
-    eventText: String
-    createdAt: String
+    title: String
+    description: String
+    contact: String
+    contactInfo: String
+    location: String
+    date: String
+    url: String
     username: String
-    commentCount: Int
-    comments: [Comment]
+
   }
 
   type Comment {

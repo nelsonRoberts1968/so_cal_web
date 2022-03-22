@@ -7,7 +7,6 @@ import Toolbar from '../components/Toolbar'
 import LayoutHome from '../components/Hero/LayoutHome'
 import Button from '../components/Button';
 
-import Auth from "../utils/auth";
 
 const SignUp = (props) => {
     const [formState, setFormState] = useState({
@@ -90,7 +89,7 @@ const SignUp = (props) => {
                         type="submit"
                         value="Send"
                         className="send-button form-control btn btn-primary"
-                    > Log in </Button>
+                    > Sign Up</Button>
                 </form>
             </LayoutHome>
         </>

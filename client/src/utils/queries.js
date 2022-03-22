@@ -1,27 +1,33 @@
 import { gql } from "@apollo/client";
 
 export const QUERY_EVENTS = gql`
-  query event($username: String) {
-    events(username: $username) {
+  query event($title: String!, $description: String!, $contact: String!, $contactInfo: String!, $date: String!, $location: String!, $url: String!) {
+    events(title: $title, description: $description, contact: $contact, contactInfo: $contactInfo, date: $date, location: $location, url: $url) {
       _id
-      eventText
-      createdAt
-      username
+      title
+      description
+      contact
+      contactInfo
+      date
+      location
+      url
       }
     }
-  }
 `;
 
 export const QUERY_EVENT = gql`
   query event($id: ID!) {
     event(_id: $id) {
       _id
-      eventText
-      createdAt
-      username
+      title
+      description
+      contact
+      contactInfo
+      date
+      location
+      url
       }
     }
-  }
 `;
 
 export const QUERY_USER = gql`
@@ -32,7 +38,7 @@ export const QUERY_USER = gql`
       email
       events {
         _id
-        eventText
+        title
         createdAt
       }
     }
@@ -48,7 +54,6 @@ export const QUERY_ME = gql`
 
       events {
         _id
-        thoughtText
         createdAt
       }
     }

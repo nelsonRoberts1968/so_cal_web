@@ -7,7 +7,7 @@ function Events() {
   return (
     <React.Fragment>
       <Calendar></Calendar>
-      <EventList></EventList>
+      {/* <EventList></EventList> */}
       <EventsForm></EventsForm>
     </React.Fragment>
   );
