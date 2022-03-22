@@ -6,7 +6,7 @@ export default function Slider() {
       <item className="image-container-l">
         <img
           alt="president"
-          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/leadershipimages/img1.jpeg?raw=true"
+          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/client/src/assets/images/leadershipimages/img1.jpeg?raw=true"
           width="400"
           height="400"
         />
@@ -16,7 +16,7 @@ export default function Slider() {
       <item className="image-container-l">
         <img
           alt="Vice-president"
-          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/leadershipimages/img5.jpeg?raw=true"
+          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/client/src/assets/images/leadershipimages/img5.jpeg?raw=true"
           width="400"
           height="400"
         />
@@ -27,7 +27,7 @@ export default function Slider() {
       <item>
         <img
           alt=""
-          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/leadershipimages/img8.jpeg?raw=true"
+          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/client/src/assets/images/leadershipimages/img8.jpeg?raw=true"
           width="400"
           height="400"
         />
@@ -37,7 +37,7 @@ export default function Slider() {
       <item className="image-container-l">
         <img
           alt=""
-          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/leadershipimages/img9.jpeg?raw=true"
+          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/client/src/assets/images/leadershipimages/img9.jpeg?raw=true"
           width="400"
           height="400"
         />
@@ -48,7 +48,7 @@ export default function Slider() {
       <item className="image-container-l">
         <img
           alt="Vice-president"
-          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/leadershipimages/img12.jpeg?raw=true"
+          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/client/src/assets/images/leadershipimages/img12.jpeg?raw=true"
           width="400"
           height="400"
         />
@@ -58,7 +58,7 @@ export default function Slider() {
       <item className="image-container-l">
         <img
           alt=""
-          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/src/assets/images/leadershipimages/img6.jpeg?raw=true"
+          src="https://github.com/nelsonRoberts1968/so_cal_web/blob/main/client/src/assets/images/leadershipimages/img6.jpeg?raw=true"
           width="400"
           height="400"
         />
