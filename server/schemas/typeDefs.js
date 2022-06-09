@@ -9,6 +9,7 @@ const typeDefs = gql`
     lastName: String
     username: String
     email: String
+    password: String
     eventCount: Int
     events: [Event]
   }
